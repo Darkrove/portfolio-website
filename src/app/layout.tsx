@@ -21,7 +21,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           {children}
-          <ToggleTheme />
+          <div className="hidden sm:block">
+            <ToggleTheme />
+          </div>
         </ThemeProvider>
       </body>
     </html>
