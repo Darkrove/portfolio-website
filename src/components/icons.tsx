@@ -1,10 +1,17 @@
-import { Bug, LucideProps, Moon, SunMedium, MapPin } from "lucide-react";
+import {
+  Bug,
+  LucideProps,
+  Moon,
+  SunMedium,
+  MoveUpRightIcon,
+} from "lucide-react";
 
 type IconProps = React.HTMLAttributes<SVGElement>;
 
 export const Icons = {
   sun: SunMedium,
   moon: Moon,
+  up: MoveUpRightIcon,
   pin: (props: LucideProps) => (
     <svg
       viewBox="0 0 0.48 0.48"
