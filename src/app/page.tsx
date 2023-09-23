@@ -3,7 +3,21 @@ import Layout from "@/components/layout";
 import { Icons } from "@/components/icons";
 import Link from "next/link";
 
-export default function Home() {
+async function getData() {
+  const res = await fetch("https://ghpr.asrvd.me/darkrove");
+  // The return value is *not* serialized
+  // You can return Date, Map, Set, etc.
+
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.json();
+}
+
+export default async function Home() {
+  const res = await getData();
   return (
     <Layout>
       <div className="w-full h-full p-8 flex flex-col justify-center items-center relative gap-4">
