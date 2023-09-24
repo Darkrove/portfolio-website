@@ -5,7 +5,8 @@ import {
   SunMedium,
   MoveUpRightIcon,
   Star,
-  Forklift,
+  Link,
+  AtSign
 } from "lucide-react";
 
 type IconProps = React.HTMLAttributes<SVGElement>;
@@ -15,6 +16,8 @@ export const Icons = {
   moon: Moon,
   up: MoveUpRightIcon,
   star: Star,
+  link: Link,
+  mail: AtSign,
   fork: (props: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
