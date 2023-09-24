@@ -2,274 +2,128 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import Spotlight, { SpotlightCard } from "@/components/spotlight";
+import Layout from "@/components/layout";
 import { Icons } from "@/components/icons";
 
 interface Props {}
 
 const page = () => {
-  const Card01 = "/card-01.png";
-  const Card03 = "/card-03.png";
-  const Card02 = "/card-02.png";
-  const Card04 = "/card-04.png";
   return (
-    <body className="relative font-inter antialiased">
-      <main className="relative min-h-screen flex flex-col bg-background overflow-hidden">
-        <div className="w-full max-w-6xl mx-auto px-4 md:px-6 py-8 md:py-12">
-          <Spotlight className="max-w-sm mx-auto grid gap-6 lg:grid-cols-3 items-start lg:max-w-none group">
-            {/* Card #5 */}
-            <SpotlightCard className="lg:col-span-2">
-              <div className="relative h-full bg-background p-6 pb-8 rounded-[inherit] z-20 overflow-hidden">
-                {/* Radial gradient */}
-                <div
-                  className="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square"
-                  aria-hidden="true"
-                >
-                  <div className="absolute inset-0 translate-z-0 bg-slate-900 rounded-full blur-[80px]"></div>
-                </div>
-                <div className="flex flex-col justify-center h-full items-center text-center gap-1">
-                  <div className="relative object-contain object-center inline-flex">
-                    <div
-                      className="w-[40%] h-[40%] absolute inset-0 m-auto -translate-y-[10%] blur-3xl -z-10 rounded-full bg-indigo-600"
-                      aria-hidden="true"
-                    ></div>
-                  </div>
-                  {/* Text */}
-                  <div className="flex flex-col items-start justify-start gap-1 w-full h-full">
-                    <div className="flex w-full justify-between items-center">
-                      <div className="flex gap-3">
-                        <Avatar className="w-14 h-14 grayscale">
-                          <AvatarImage src="https://avatars.githubusercontent.com/u/53792139?v=4" />
-                          <AvatarFallback>SS</AvatarFallback>
-                        </Avatar>
-                        <div>
-                          <h2 className="text-foreground text-2xl m-0 font-semibold">
-                            Hi, I&apos;m Sajjad.
-                          </h2>
-                          <h2 className="text-slate-600 text-md m-0 font-semibold text-left">
-                            web developer
-                          </h2>
-                        </div>
-                      </div>
-                      <div className="justify-end">
-                        <Link
-                          className="inline-flex justify-center items-center whitespace-nowrap rounded-lg bg-slate-900 hover:bg-background border border-slate-800 p-2 text-sm font-medium text-slate-400 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-700 transition-colors duration-150"
-                          href="https://www.linkedin.com/in/sajjad-shaikh-18a0811ab/"
-                          target="_blank"
-                        >
-                          <Icons.linkedin className="w-6 h-6" />
-                        </Link>
-                      </div>
-                    </div>
-
-                    <h2 className="text-foreground text-2xl m-0 font-semibold mt-4 text-left">
-                      Passionate to pursue the technology.
-                    </h2>
-                    <h2 className="text-slate-600 text-lg m-0 mt-4 text-left">
-                      I enjoy learning new things and try to overcome new
-                      challenges while analyzing how I improved through them.
-                    </h2>
-                  </div>
-
-                  {/* <div className="grow mb-5">
-                    <h2 className="text-foreground text-4xl m-0 font-extrabold">
-                      Hi, I&apos;m{" "}
-                      <span className="text-slate-400">Sajjad</span>
-                    </h2>
-                    <h2 className="text-xl text-foreground font-bold mb-1">
-                      Amazing Integration
-                    </h2>
-                    <p className="text-sm text-slate-600">
-                      Quickly apply filters to refine your issues lists and
-                      create custom views.
-                    </p>
-                  </div> */}
-                </div>
-              </div>
-            </SpotlightCard>
-            {/* Card #4 */}
-            <SpotlightCard>
-              <div className="relative h-full bg-background p-6 pb-8 rounded-[inherit] z-20 overflow-hidden">
-                {/* Radial gradient */}
-                <div
-                  className="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square"
-                  aria-hidden="true"
-                >
-                  <div className="absolute inset-0 translate-z-0 bg-slate-900 rounded-full blur-[80px]"></div>
-                </div>
-                <div className="flex flex-col h-full justify-center items-center text-center">
-                  {/* Image */}
-                  <div className="relative object-contain object-center inline-flex">
-                    <div
-                      className="w-[40%] h-[40%] absolute inset-0 m-auto -translate-y-[10%] blur-3xl -z-10 rounded-full bg-indigo-600"
-                      aria-hidden="true"
-                    ></div>
-                    <Image
-                      className="inline-flex"
-                      src={Card04}
-                      width={200}
-                      height={200}
-                      alt="Card 03"
-                    />
-                  </div>
-                  {/* Text */}
-                  {/* <div className="grow mb-5">
-                    <h2 className="text-xl text-foreground font-bold mb-1">
-                      Amazing Integration
-                    </h2>
-                    <p className="text-sm text-slate-600">
-                      Quickly apply filters to refine your issues lists and
-                      create custom views.
-                    </p>
-                  </div>
-                  <a
-                    className="inline-flex justify-center items-center whitespace-nowrap rounded-lg bg-slate-900 hover:bg-background border border-slate-800 px-3 py-1.5 text-sm font-medium text-slate-400 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-700 transition-colors duration-150"
-                    href="#0"
-                  >
-                    <svg
-                      className="fill-slate-600 mr-2"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="14"
-                    >
-                      <path d="M12.82 8.116A.5.5 0 0 0 12 8.5V10h-.185a3 3 0 0 1-2.258-1.025l-.4-.457-1.328 1.519.223.255A5 5 0 0 0 11.815 12H12v1.5a.5.5 0 0 0 .82.384l3-2.5a.5.5 0 0 0 0-.768l-3-2.5ZM12.82.116A.5.5 0 0 0 12 .5V2h-.185a5 5 0 0 0-3.763 1.708L3.443 8.975A3 3 0 0 1 1.185 10H1a1 1 0 1 0 0 2h.185a5 5 0 0 0 3.763-1.708l4.609-5.267A3 3 0 0 1 11.815 4H12v1.5a.5.5 0 0 0 .82.384l3-2.5a.5.5 0 0 0 0-.768l-3-2.5ZM1 4h.185a3 3 0 0 1 2.258 1.025l.4.457 1.328-1.52-.223-.254A5 5 0 0 0 1.185 2H1a1 1 0 0 0 0 2Z" />
-                    </svg>
-                    <span>Connect</span>
-                  </a> */}
-                </div>
-              </div>
-            </SpotlightCard>
-            {/* Card #1 */}
-            <SpotlightCard>
-              <div className="relative h-full bg-background p-6 pb-8 rounded-[inherit] z-20 overflow-hidden">
-                {/* Radial gradient */}
-                <div
-                  className="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square"
-                  aria-hidden="true"
-                >
-                  <div className="absolute inset-0 translate-z-0 bg-slate-900 rounded-full blur-[80px]"></div>
-                </div>
-                <div className="flex flex-col h-full justify-center items-center text-center">
-                  {/* Image */}
-                  <div className="relative inline-flex">
-                    <div
-                      className="w-[40%] h-[40%] absolute inset-0 m-auto -translate-y-[10%] blur-3xl -z-10 rounded-full bg-indigo-600"
-                      aria-hidden="true"
-                    ></div>
-                    <Image
-                      className="inline-flex"
-                      src={Card01}
-                      width={200}
-                      height={200}
-                      alt="Card 01"
-                    />
-                  </div>
-                  {/* Text */}
+    <Layout>
+      <div className="w-full h-full p-8 flex flex-col justify-center items-center relative gap-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+          <div className="sm:rounded-none rounded-3xl sm:rounded-tl-2xl sm:rounded-tr-3xl sm:rounded-bl-3xl bg-secondary">
+            <div className="flex h-full flex-col justify-end ">
+              <Image
+                src="https://avatars.githubusercontent.com/u/53792139?v=4"
+                alt="avatar"
+                className="sm:rounded-none rounded-3xl shadow-xl sm:rounded-tl-2xl sm:rounded-tr-3xl sm:rounded-bl-3xl h-full relative object-cover grayscale m-0 hover:grayscale-0"
+                height={1000}
+                width={1000}
+              />
+            </div>
+          </div>
+          <div className="flex flex-col justify-between sm:col-span-2 gap-4">
+            <div className="sm:rounded-none rounded-3xl bg-secondary sm:rounded-tl-3xl sm:rounded-tr-2xl p-4">
+              <div className="flex justify-between items-center">
+                <h2 className="text-secondary-foreground text-4xl m-0 font-extrabold">
+                  Hi, I&apos;m <span className="text-[#86dba6]">Sajjad</span>
+                </h2>
+                <div className="flex gap-2">
                   <Link
-                    className="inline-flex justify-center items-center whitespace-nowrap rounded-lg bg-slate-900 hover:bg-background border border-slate-800 px-3 py-1.5 text-sm font-medium text-slate-400 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-700 transition-colors duration-150"
-                    href="https://github.com/Darkrove"
+                    href="https://www.linkedin.com/in/sajjad-shaikh-18a0811ab/"
                     target="_blank"
+                    className="group rounded-xl transition-all duration-75 hover:scale-105 focus:outline-none active:scale-95 hover:bg-blue-500 h-8 w-8 flex justify-center items-center bg-primary/20"
                   >
-                    <Icons.up className="mr-2 w-4 h-4" />
-                    <span>@darkrove</span>
+                    <Icons.linkedin className="w-5 h-5 text-primary-foreground transition-all group-hover:text-gray-100" />
                   </Link>
                 </div>
               </div>
-            </SpotlightCard>
-            {/* Card #2 */}
-            <SpotlightCard>
-              <div className="relative h-full bg-background p-6 pb-8 rounded-[inherit] z-20 overflow-hidden">
-                {/* Radial gradient */}
-                <div
-                  className="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square"
-                  aria-hidden="true"
-                >
-                  <div className="absolute inset-0 translate-z-0 bg-slate-900 rounded-full blur-[80px]"></div>
-                </div>
-                <div className="flex flex-col h-full justify-center items-center text-center">
-                  {/* Image */}
-                  <div className="relative inline-flex">
-                    <div
-                      className="w-[40%] h-[40%] absolute inset-0 m-auto -translate-y-[10%] blur-3xl -z-10 rounded-full bg-indigo-600"
-                      aria-hidden="true"
-                    ></div>
-                    <Image
-                      className="inline-flex"
-                      src={Card02}
-                      width={200}
-                      height={200}
-                      alt="Card 02"
-                    />
-                  </div>
-                  {/* Text */}
-                  <Link
-                    className="inline-flex justify-center items-center whitespace-nowrap rounded-lg bg-slate-900 hover:bg-background border border-slate-800 px-3 py-1.5 text-sm font-medium text-slate-400 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-700 transition-colors duration-150"
-                    href="https://twitter.com/sajjads72619701"
-                    target="_blank"
-                  >
-                    <Icons.up className="mr-2 w-4 h-4" />
-                    <span>@sajjadshaikh</span>
-                  </Link>
+              <p className="text-lg sm:w-3/4">
+                I enjoy learning new things and try to overcome new challenges
+                while analyzing how I improved through them.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row h-full justify-between gap-4">
+              <div className="bg-secondary p-4 flex flex-col justify-between w-full rounded-3xl sm:rounded-none">
+                <div className="w-full h-full justify-center flex items-center">
+                  <p className="text-secondary-foreground text-2xl font-extrabold text-center">
+                    Web <br />
+                    developer
+                  </p>
                 </div>
               </div>
-            </SpotlightCard>
-            {/* Card #3 */}
-            <SpotlightCard>
-              <div className="relative h-full bg-background p-6 pb-8 rounded-[inherit] z-20 overflow-hidden">
-                {/* Radial gradient */}
-                <div
-                  className="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square"
-                  aria-hidden="true"
-                >
-                  <div className="absolute inset-0 translate-z-0 bg-slate-900 rounded-full blur-[80px]"></div>
-                </div>
-                <div className="flex flex-col h-full items-center text-center">
-                  {/* Image */}
-                  <div className="relative inline-flex">
-                    <div
-                      className="w-[40%] h-[40%] absolute inset-0 m-auto -translate-y-[10%] blur-3xl -z-10 rounded-full bg-indigo-600"
-                      aria-hidden="true"
-                    ></div>
-                    <Image
-                      className="inline-flex"
-                      src={Card03}
-                      width={200}
-                      height={200}
-                      alt="Card 03"
-                    />
-                  </div>
-                  {/* Text */}
-                  <div className="grow mb-5">
-                    <h2 className="text-xl text-foreground font-bold mb-1">
-                      Amazing Integration
-                    </h2>
-                    <p className="text-sm text-slate-600">
-                      Quickly apply filters to refine your issues lists and
-                      create custom views.
-                    </p>
-                  </div>
-                  <a
-                    className="inline-flex justify-center items-center whitespace-nowrap rounded-lg bg-slate-900 hover:bg-background border border-slate-800 px-3 py-1.5 text-sm font-medium text-slate-400 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-700 transition-colors duration-150"
-                    href="#0"
-                  >
-                    <svg
-                      className="fill-slate-600 mr-2"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="14"
-                    >
-                      <path d="M12.82 8.116A.5.5 0 0 0 12 8.5V10h-.185a3 3 0 0 1-2.258-1.025l-.4-.457-1.328 1.519.223.255A5 5 0 0 0 11.815 12H12v1.5a.5.5 0 0 0 .82.384l3-2.5a.5.5 0 0 0 0-.768l-3-2.5ZM12.82.116A.5.5 0 0 0 12 .5V2h-.185a5 5 0 0 0-3.763 1.708L3.443 8.975A3 3 0 0 1 1.185 10H1a1 1 0 1 0 0 2h.185a5 5 0 0 0 3.763-1.708l4.609-5.267A3 3 0 0 1 11.815 4H12v1.5a.5.5 0 0 0 .82.384l3-2.5a.5.5 0 0 0 0-.768l-3-2.5ZM1 4h.185a3 3 0 0 1 2.258 1.025l.4.457 1.328-1.52-.223-.254A5 5 0 0 0 1.185 2H1a1 1 0 0 0 0 2Z" />
-                    </svg>
-                    <span>Connect</span>
-                  </a>
+              <div className="sm:rounded-none rounded-3xl bg-secondary sm:rounded-br-3xl p-4 flex flex-col justify-between w-full">
+                <div className="w-full h-full justify-center flex items-center">
+                  <p className="text-secondary-foreground text-xl font-medium text-center">
+                    Passionate to pursue the technology.
+                  </p>
                 </div>
               </div>
-            </SpotlightCard>
-          </Spotlight>
+            </div>
+          </div>
         </div>
-      </main>
-    </body>
+        <div className="w-full h-full bg-secondary p-8 rounded-3xl relative overflow-hidden">
+          <div className="flex justify-center items-center h-32 w-full transition-all duration-500 ease-in">
+            <Image
+              src="/avatar.png"
+              alt="avatar"
+              className="shadow-xl rounded-full z-50 w-auto h-full relative object-contain object-center grayscale"
+              height={1000}
+              width={1000}
+            />
+            <div className="w-[120px] h-[120px] z-40 bg-green-500 rounded-full absolute left-1/2 bottom-1/2 transform -translate-x-1/2 card-circle"></div>
+            <div className="w-[200px] h-[200px] z-30 bg-green-500/30 rounded-full absolute left-1/2 bottom-1/2 transform -translate-x-1/2 card-circle"></div>
+            <div className="w-[280px] h-[280px] z-20 bg-green-500/20 rounded-full absolute left-1/2 bottom-1/2 transform -translate-x-1/2 card-circle"></div>
+            <div className="w-[360px] h-[360px] z-10 bg-green-500/10 rounded-full absolute left-1/2 bottom-1/2 transform -translate-x-1/2 card-circle"></div>
+            <div className="w-[440px] h-[440px] z-0 bg-green-500/5 rounded-full absolute left-1/2 bottom-1/2 transform -translate-x-1/2 card-circle"></div>
+          </div>
+          {/* <p className=" p-4">Content inside the div. Overflow is hidden.</p> */}
+        </div>
+        <div className="w-full grid grid-cols-1 gap-4 sm:grid-cols-3">
+          <div className="flex w-full h-full justify-between">
+            <div className="sm:rounded-none rounded-3xl sm:rounded-tl-3xl sm:rounded-bl-3xl bg-secondary p-4 flex flex-col justify-between w-full">
+              <div className="w-full h-full justify-center flex flex-col gap-3 items-center">
+                <Icons.twitter className="w-16 h-16 text-secondary-foreground transition-all group-hover:text-blue-500" />
+                <h2 className="text-secondary-foreground text-xl m-0 font-bold"></h2>
+                <Link
+                  href="https://twitter.com/sajjads72619701"
+                  target="_blank"
+                  className="text-secondary-foreground text-xl m-0 font-bold"
+                >
+                  @sajjadshaikh
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="flex w-full h-full justify-between">
+            <div className="bg-secondary p-4 flex flex-col justify-between w-full rounded-3xl sm:rounded-none">
+              <div className="w-full h-full justify-center flex items-center">
+                <Icons.pin className="w-7 h-7 mr-2" />
+                <p className="text-secondary-foreground text-3xl font-extrabold text-center">
+                  India
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="flex w-full h-full justify-between">
+            <div className="sm:rounded-none rounded-3xl sm:rounded-tr-3xl sm:rounded-br-3xl bg-secondary p-4 flex flex-col justify-between w-full">
+              <div className="w-full h-full justify-center flex flex-col gap-3 items-center">
+                <Icons.gitHub className="w-16 h-16 text-secondary-foreground transition-all group-hover:text-blue-500" />
+                <h2 className="text-secondary-foreground text-xl m-0 font-bold"></h2>
+                <Link
+                  href="https://github.com/Darkrove"
+                  target="_blank"
+                  className="text-secondary-foreground text-xl m-0 font-bold"
+                >
+                  @darkrove
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Layout>
   );
 };
 
