@@ -111,7 +111,7 @@ export default async function Home() {
             </SpotlightCard>
             {/* Card #4 */}
             <SpotlightCard>
-              <div className="relative h-full min-h-[200px] bg-background rounded-[inherit] z-20 overflow-hidden">
+              <div className="relative h-full min-h-[250px] bg-background rounded-[inherit] z-20 overflow-hidden">
                 {/* Radial gradient */}
                 <div
                   className="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square"
@@ -120,8 +120,10 @@ export default async function Home() {
                   <div className="absolute inset-0 translate-z-0 dark:bg-slate-900 bg-slate-200 rounded-full blur-[80px]"></div>
                 </div>
                 <div className="flex flex-col h-full justify-center items-center text-center">
-                  <div className="firefly-body w-full h-full overflow-hidden relative">
-                    {divElements}
+                  <div className="relative w-full h-full">
+                    <div className="firefly-body w-full h-full overflow-hidden relative">
+                      {divElements}
+                    </div>
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="p-4">
                         {/* Your content goes here */}
