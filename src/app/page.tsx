@@ -27,6 +27,10 @@ export default async function Home() {
   const Card03 = "/card-03.png";
   const Card02 = "/card-02.png";
   const Card04 = "/card-04.png";
+  const quantity = 100;
+  const divElements = Array.from({ length: quantity }, (_, index) => (
+    <div key={index} className="firefly" />
+  ));
   const getRepoPath = (index: number) => {
     return `/repo-${index}.png`;
   };
@@ -107,7 +111,7 @@ export default async function Home() {
             </SpotlightCard>
             {/* Card #4 */}
             <SpotlightCard>
-              <div className="relative h-full bg-background p-6 pb-8 rounded-[inherit] z-20 overflow-hidden">
+              <div className="relative h-full min-h-[300px]  bg-background p-6 pb-8 rounded-[inherit] z-20 overflow-hidden">
                 {/* Radial gradient */}
                 <div
                   className="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square"
@@ -116,8 +120,30 @@ export default async function Home() {
                   <div className="absolute inset-0 translate-z-0 dark:bg-slate-900 bg-slate-200 rounded-full blur-[80px]"></div>
                 </div>
                 <div className="flex flex-col h-full justify-center items-center text-center">
+                  <div className="firefly-body w-full h-full overflow-hidden relative">
+                    {divElements}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="p-4">
+                        {/* Your content goes here */}
+                        <div className="relative object-contain object-center inline-flex">
+                          <div
+                            className="w-[40%] h-[40%] absolute inset-0 m-auto -translate-y-[10%] blur-3xl -z-10 rounded-full bg-indigo-600"
+                            aria-hidden="true"
+                          ></div>
+                          <Image
+                            className="inline-flex"
+                            src={Card04}
+                            width={200}
+                            height={200}
+                            alt="Card 03"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
                   {/* Image */}
-                  <div className="relative object-contain object-center inline-flex">
+                  {/* <div className="relative object-contain object-center inline-flex">
                     <div
                       className="w-[40%] h-[40%] absolute inset-0 m-auto -translate-y-[10%] blur-3xl -z-10 rounded-full bg-indigo-600"
                       aria-hidden="true"
@@ -129,7 +155,7 @@ export default async function Home() {
                       height={200}
                       alt="Card 03"
                     />
-                  </div>
+                  </div> */}
                   {/* Text */}
                   {/* <div className="grow mb-5">
                     <h2 className="text-xl text-foreground font-bold mb-1">

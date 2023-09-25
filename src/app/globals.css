@@ -73,3 +73,24 @@
   animation: cardCircleAnimation 6s ease infinite;
   position: absolute;
 }
+
+.star-animation-loaded {
+  opacity: 1;
+}
+
+.star-animation {
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transition: 1s ease opacity;
+  width: 100%;
+  z-index: -1;
+}
+
+canvas {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}

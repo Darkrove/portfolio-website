@@ -1,4 +1,5 @@
 import "./globals.css";
+import "./firefly.sass";
 import type { Metadata } from "next";
 import { headers } from "next/headers";
 import { Inter } from "next/font/google";
