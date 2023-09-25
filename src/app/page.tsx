@@ -111,7 +111,7 @@ export default async function Home() {
             </SpotlightCard>
             {/* Card #4 */}
             <SpotlightCard>
-              <div className="relative h-full bg-background rounded-[inherit] z-20 overflow-hidden">
+              <div className="relative h-full min-h-[200px] bg-background rounded-[inherit] z-20 overflow-hidden">
                 {/* Radial gradient */}
                 <div
                   className="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square"
