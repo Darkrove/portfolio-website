@@ -88,8 +88,12 @@ export default async function Home() {
                       Passionate to pursue the technology.
                     </h2>
                     <h2 className="text-slate-600 text-lg m-0 mt-4 text-left">
-                      I enjoy learning new things and try to overcome new
-                      challenges while analyzing how I improved through them.
+                      I am a self-taught 👨‍💻 web developer and programmer who
+                      recently pursued a computer science degree 🎓. I started
+                      coding in the 11th grade and discovered my passion for 🌐
+                      web development during the COVID-19 pandemic. I love
+                      working on both the frontend and backend. Currently, I am
+                      exploring the exciting world of Web 3 🕸️.
                     </h2>
                   </div>
 
