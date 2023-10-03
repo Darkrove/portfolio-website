@@ -28,7 +28,7 @@ While my portfolio website is already functional and informative, there are seve
 
 ## API Integrations
 
-- [x] **LeetCode API**: Fetch and display LeetCode stats.
+- [x] **LeetCode API**: Fetch and display LeetCode stats. You can access your LeetCode stats by visiting the [LeetCode API Link](https://sajjadshaikh.vercel.app/api/leetcode?username=darkrove). To get your own LeetCode statistics, simply replace `darkrove` in the URL with your LeetCode username. For example, to fetch your LeetCode stats, you can use the following URL: `https://sajjadshaikh.vercel.app/api/leetcode?username=your_username_here`.
 
 ## API Integrations to Be Added
 
