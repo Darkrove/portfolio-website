@@ -5,13 +5,16 @@ import { headers } from "next/headers";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/context/theme-provider";
 import { ToggleTheme } from "@/components/toggle-theme";
-import NavBar from "@/components/nav";
+import { siteConfig } from "@/config/site";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Sajjad",
-  description: "student and web developer from India",
+  title: {
+    default: siteConfig.name,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
 };
 
 export default function RootLayout({

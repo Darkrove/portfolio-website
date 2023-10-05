@@ -94,3 +94,78 @@ canvas {
   overflow-clip-margin: content-box;
   overflow: clip;
 }
+
+.d-block {
+  display: block !important;
+}
+
+.text-heavy {
+  font-family: "Mona Sans", "Mona Sans Header Fallback", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+  font-weight: 900;
+}
+
+.text-extrabold {
+  font-family: "Mona Sans", "Mona Sans Header Fallback", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+  font-weight: 800 !important;
+}
+
+.font-mktg .font-alt-mktg {
+  font-family: "Hubot Sans", "Mona Sans", "Mona Sans Fallback", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+  font-feature-settings: "liga", "ss02";
+}
+
+.z-2 {
+  z-index: 2 !important;
+}
+
+.lh-condensed-ultra {
+  line-height: 1 !important;
+}
+.mona-ampersand {
+  background: linear-gradient(180deg, #b4bacd 0%, #5b6a98 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.z-1 {
+  z-index: 1 !important;
+}
+.z-2 {
+  z-index: 2 !important;
+}
+
+.z-3 {
+  z-index: 3 !important;
+}
+
+.text-extra-condensed {
+  font-stretch: 65%;
+}
+
+.framer-shadow {
+  align-content: center;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 48px;
+  box-shadow: 0 4px 8px #00000014, 0 0 4px #0000000a, 0 1px 1px #0000001f,
+    0 0 0 0.5px #00000005;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: min-content;
+  justify-items: center;
+  justify-content: space-between;
+  overflow: visible;
+  padding: 8px 10px 8px 8px;
+  position: relative;
+  width: 556px;
+}

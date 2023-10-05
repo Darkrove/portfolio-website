@@ -18,7 +18,7 @@ import { useTheme } from "next-themes";
 const NavbarItems = [
   {
     name: "Home",
-    slug: "/",
+    slug: "/v2",
     icon: Home,
   },
   {
@@ -85,7 +85,7 @@ export default function NavBar({ path }: { path: string }) {
               {path === item.slug ? (
                 <button
                   key={index}
-                  className="w-full flex justify-center items-center dark:bg-zinc-700 bg-zinc-800 dark:hover:bg-zinc-700 hover:bg-zinc-800 focus:bg-zinc-800 shadow hover:shadow-xl rounded hover:scale-110 duration-300 ease-in-out dark:focus:bg-zinc-700 relative"
+                  className="w-full flex justify-center items-center dark:bg-slate-700 bg-slate-800 dark:hover:bg-slate-700 hover:bg-slate-800 focus:bg-slate-800 shadow hover:shadow-xl rounded hover:scale-110 duration-300 ease-in-out dark:focus:bg-slate-700 relative"
                   onMouseLeave={() => {
                     const temp = [...tooltipVisibility];
                     temp[index] = false;
@@ -99,10 +99,10 @@ export default function NavBar({ path }: { path: string }) {
                   onClick={() => router.push(item.slug)}
                 >
                   <div className="p-2">
-                    <item.icon size="1rem" className="text-zinc-100" />
+                    <item.icon size="1rem" className="text-slate-100" />
                   </div>
                   {tooltipVisibility[index] && (
-                    <span className="absolute min-w-full text-[0.75rem] leading-none left-10 p-[0.62rem] rounded shadow-xl text-zinc-200 dark:bg-zinc-700 bg-zinc-800">
+                    <span className="absolute min-w-full text-[0.75rem] leading-none left-10 p-[0.62rem] rounded shadow-xl text-slate-200 dark:bg-slate-700 bg-slate-800">
                       {item.name}
                     </span>
                   )}
@@ -110,7 +110,7 @@ export default function NavBar({ path }: { path: string }) {
               ) : (
                 <button
                   key={index}
-                  className="w-full flex justify-center items-center dark:bg-zinc-800 dark:hover:bg-zinc-700 shadow hover:shadow-xl rounded hover:scale-110 duration-300 ease-in-out dark:focus:bg-zinc-700 bg-zinc-700 hover:bg-zinc-800 focus:bg-zinc-800 relative"
+                  className="w-full flex justify-center items-center dark:bg-slate-800 dark:hover:bg-slate-700 shadow hover:shadow-xl rounded hover:scale-110 duration-300 ease-in-out dark:focus:bg-slate-700 bg-slate-700 hover:bg-slate-800 focus:bg-slate-800 relative"
                   onMouseLeave={() => {
                     const temp = [...tooltipVisibility];
                     temp[index] = false;
@@ -124,10 +124,10 @@ export default function NavBar({ path }: { path: string }) {
                   onClick={() => router.push(item.slug)}
                 >
                   <div className="p-2">
-                    <item.icon size="1rem" className="text-zinc-100" />
+                    <item.icon size="1rem" className="text-slate-100" />
                   </div>
                   {tooltipVisibility[index] && (
-                    <span className="absolute text-[0.75rem] leading-none left-10 p-[0.62rem] rounded shadow-xl text-zinc-200 dark:bg-zinc-700 bg-zinc-800">
+                    <span className="absolute text-[0.75rem] leading-none left-10 p-[0.62rem] rounded shadow-xl text-slate-200 dark:bg-slate-700 bg-slate-800">
                       {item.name}
                     </span>
                   )}
@@ -136,25 +136,8 @@ export default function NavBar({ path }: { path: string }) {
             </div>
           );
         })}
-        <div className="flex flex-col gap-4">
-          <button
-            className="overflow-hidden w-full flex justify-center items-center dark:bg-zinc-800 dark:hover:bg-zinc-700 bg-zinc-700 hover:bg-zinc-800 shadow hover:shadow-xl rounded hover:scale-110 duration-300 ease-in-out"
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          >
-            <div className="p-2 text-zinc-100">
-              {/* {theme === "dark" ? (
-                <Sun size="1rem" className="text-zinc-100" />
-              ) : (
-                <Moon size="1rem" className="text-zinc-100" />
-              )} */}
-              <Sun className="rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-              <Moon className="absolute rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-              <span className="sr-only">Toggle theme</span>
-            </div>
-          </button>
-        </div>
       </div>
-      <div className="border-r-2 dark:border-zinc-800 border-zinc-500 h-full mt-4"></div>
+      <div className="border-r-2 dark:border-slate-800 border-slate-500 h-full mt-4"></div>
     </div>
   );
 }
