@@ -52,20 +52,24 @@ const Page: React.FC<Props> = () => {
           </div>
           <div id="wrapper" className="flex items-center gap-2">
             <Link
-              className="flex items-center p-1 sm:p-0 sm:py-1 sm:px-2 hover:bg-gray-100 rounded-full"
+              className="flex items-center p-1 sm:p-0 sm:py-1 sm:px-2 hover:bg-gray-100 rounded-full transform hover:scale-105 transition-transform duration-300 ease-in-out"
               href={siteConfig.links.twitter}
               target="_blank"
             >
-              <Icons.x className="w-5 h-5 sm:mr-1" />
-              <p className="text-sm hidden sm:block">sajjad</p>
+              <div className="flex justify-center relative group">
+                <Icons.x className="w-5 h-5 sm:mr-1" />
+                <p className="text-sm hidden sm:block">sajjad</p>
+              </div>
             </Link>
             <Link
-              className="flex items-center p-1 sm:p-0 sm:py-1 sm:px-2 hover:bg-gray-100 rounded-full"
+              className="flex items-center p-1 sm:p-0 sm:py-1 sm:px-2 hover:bg-gray-100 rounded-full transform hover:scale-105 transition-transform duration-300 ease-in-out"
               href={siteConfig.links.github}
               target="_blank"
             >
-              <Icons.gitHub className="w-5 h-5 sm:mr-1" />
-              <p className="text-sm hidden sm:block">darkrove</p>
+              <div className="flex justify-center relative group">
+                <Icons.gitHub className="w-5 h-5 sm:mr-1" />
+                <p className="text-sm hidden sm:block">darkrove</p>
+              </div>
             </Link>
           </div>
         </div>
