@@ -167,5 +167,13 @@ canvas {
   overflow: visible;
   padding: 8px 10px 8px 8px;
   position: relative;
-  width: 556px;
+  width: 100%; /* Use full width by default */
+
+  /* Media Query for smaller screens */
+  @media (max-width: 768px) {
+    width: 90%; /* Reduce width for screens smaller than 768px */
+    padding: 8px; /* Adjust padding for smaller screens */
+  }
+
+  /* Add more media queries for other screen sizes as needed */
 }

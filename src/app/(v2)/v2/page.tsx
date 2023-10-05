@@ -57,7 +57,7 @@ const Page: React.FC<Props> = () => {
               target="_blank"
             >
               <Icons.x className="w-5 h-5 mr-1" />
-              <p className="text-sm">sajjad</p>
+              <p className="text-sm hidden sm:block">sajjad</p>
             </Link>
             <Link
               className="flex items-center py-1 px-2 hover:bg-gray-100 rounded-full"
@@ -65,7 +65,7 @@ const Page: React.FC<Props> = () => {
               target="_blank"
             >
               <Icons.gitHub className="w-5 h-5 mr-1" />
-              <p className="text-sm">darkrove</p>
+              <p className="text-sm hidden sm:block">darkrove</p>
             </Link>
           </div>
         </div>
