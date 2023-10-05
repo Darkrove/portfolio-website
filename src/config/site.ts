@@ -2,7 +2,8 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   name: "Sajjad Shaikh",
-  description: "student and web developer from India",
+  description: "web developer",
+  bio: "I am a self-taught 👨‍💻 web developer and programmer who recently pursued a computer science degree 🎓. I started coding in the 11th grade and discovered my passion for 🌐 web development during the COVID-19 pandemic. I love working on both the frontend and backend. Currently, I am exploring the exciting world of Web 3 🕸️.",
   mainNav: [
     {
       title: "Home",

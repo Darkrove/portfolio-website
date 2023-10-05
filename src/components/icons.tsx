@@ -8,6 +8,7 @@ import {
   Link,
   AtSign,
   Twitter,
+  Hourglass
 } from "lucide-react";
 
 type IconProps = React.HTMLAttributes<SVGElement>;
@@ -19,6 +20,7 @@ export const Icons = {
   star: Star,
   link: Link,
   mail: AtSign,
+  hourglass: Hourglass,
   x: (props: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"

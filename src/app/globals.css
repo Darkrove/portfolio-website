@@ -153,7 +153,6 @@ canvas {
 .framer-shadow {
   align-content: center;
   align-items: center;
-  background-color: transparent;
   border-radius: 48px;
   box-shadow: 0 4px 8px #00000014, 0 0 4px #0000000a, 0 1px 1px #0000001f,
     0 0 0 0.5px #00000005;

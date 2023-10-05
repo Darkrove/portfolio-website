@@ -1,10 +1,13 @@
 import React from "react";
+import Balancer from "react-wrap-balancer";
 import Link from "next/link";
 
 import { Icons } from "@/components/icons";
+import { Discord } from "@/components/discord";
 import Layout from "@/components/layout";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { siteConfig } from "@/config/site";
+import { Button } from "@/components/ui/button";
 
 interface Props {}
 
@@ -42,7 +45,7 @@ const Page: React.FC<Props> = () => {
   return (
     <Layout>
       <div className="w-full flex flex-col space-y-4 justify-center items-center py-4 sm:py-8">
-        <div className="framer-shadow">
+        <div className="framer-shadow dark:bg-slate-900 bg-slate-50">
           <div id="wrapper" className="flex gap-2 items-center">
             <Avatar className="w-6 h-6">
               <AvatarImage src="https://avatars.githubusercontent.com/u/53792139?v=4" />
@@ -71,6 +74,46 @@ const Page: React.FC<Props> = () => {
                 <p className="text-sm hidden sm:block">darkrove</p>
               </div>
             </Link>
+          </div>
+        </div>
+
+        <div className="w-full h-full px-8 py-4 flex flex-col justify-center items-center relative">
+          <section className="flex flex-col-reverse lg:flex-row md:flex-row w-full justify-between items-start gap-4 lg:gap-14 md:gap-8 prose">
+            <div className="leading-none">
+              <h2 className="dark:text-slate-200 text-slate-900 text-[2.5rem] m-0 font-extrabold capitalize">
+                {siteConfig.name}
+              </h2>
+              <p className="dark:text-slate-300 text-slate-800 mt-2 mb-4 m-0">
+                {siteConfig.description}
+              </p>
+              <Balancer className="dark:text-slate-400 text-slate-700 text-sm m-0">
+                {siteConfig.bio}
+              </Balancer>
+            </div>
+            <div className="min-w-fit h-full flex items-center justify-center">
+              <Avatar className="w-32 h-32">
+                <AvatarImage src="https://avatars.githubusercontent.com/u/53792139?v=4" />
+                <AvatarFallback>SS</AvatarFallback>
+              </Avatar>
+            </div>
+          </section>
+        </div>
+        <div className="w-full flex justify-start px-8">
+          <Discord />
+        </div>
+        <div className="w-full px-8 py-4">
+          <div
+            id="action"
+            className="flex flex-col sm:flex-row justify-start gap-4"
+          >
+            <Button size="lg">
+              Chat With Me
+              <Icons.up className="ml-2 w-5 h-5" />
+            </Button>
+            <Button size="lg" variant="outline">
+              Available for work
+              <Icons.hourglass className="ml-2 w-5 h-5" />
+            </Button>
           </div>
         </div>
         {/* <h1
