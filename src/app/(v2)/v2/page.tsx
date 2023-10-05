@@ -45,7 +45,7 @@ const Page: React.FC<Props> = () => {
   return (
     <Layout>
       <div className="w-full flex flex-col space-y-4 justify-center items-center py-4 sm:py-8">
-        <div className="framer-shadow dark:bg-slate-900 bg-slate-50">
+        <div className="framer-shadow dark:bg-slate-900 bg-white">
           <div id="wrapper" className="flex gap-2 items-center">
             <Avatar className="w-6 h-6">
               <AvatarImage src="https://avatars.githubusercontent.com/u/53792139?v=4" />
