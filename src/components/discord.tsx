@@ -5,12 +5,9 @@ import { apiUrls } from "@/lib/api-urls";
 import { Separator } from "@/ui/separator";
 
 export const getData = async () => {
-  const res = await fetch(
-    "https://api.lanyard.rest/v1/users/756943267701981195",
-    {
-      next: { revalidate: 10 },
-    }
-  );
+  const res = await fetch(apiUrls.lanyard.get("756943267701981195"), {
+    next: { revalidate: 10 },
+  });
   if (!res.ok) {
     const error = await res.json();
     throw error;
@@ -19,7 +16,7 @@ export const getData = async () => {
 };
 
 const fetchLeetCode = async () => {
-  const res = await fetch(apiUrls.leetcode.get({ id: "darkrove" }), {
+  const res = await fetch(apiUrls.leetcode.get("darkrove"), {
     next: { revalidate: 10 },
   });
   if (!res.ok) {
