@@ -8,6 +8,7 @@ import Layout from "@/components/layout";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { siteConfig } from "@/config/site";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 interface Props {}
 
@@ -47,10 +48,13 @@ const Page: React.FC<Props> = () => {
       <div className="w-full flex flex-col space-y-4 justify-center items-center py-4 sm:py-8">
         <div className="framer-shadow dark:bg-slate-900 bg-white">
           <div id="wrapper" className="flex gap-2 items-center">
-            <Avatar className="w-6 h-6">
-              <AvatarImage src="https://avatars.githubusercontent.com/u/53792139?v=4" />
-              <AvatarFallback>SS</AvatarFallback>
-            </Avatar>
+            <Image
+              className="w-6 h-6"
+              src="/avatar.png"
+              alt="logo"
+              width={100}
+              height={100}
+            />
             <p className="text-sm capitalize ">sajjad</p>
           </div>
           <div id="wrapper" className="flex items-center gap-2">
