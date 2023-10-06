@@ -6,6 +6,8 @@ import clsx from "clsx";
 import { apiUrls } from "@/lib/api-urls";
 import { Separator } from "@/ui/separator";
 
+export const dynamic = 'force-dynamic'
+
 export const getData = async () => {
   const res = await fetch(apiUrls.lanyard.get("756943267701981195"), {
     cache: "no-store",
