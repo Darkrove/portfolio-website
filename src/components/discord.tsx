@@ -8,7 +8,7 @@ import { Separator } from "@/ui/separator";
 
 export const getData = async () => {
   const res = await fetch(apiUrls.lanyard.get("756943267701981195"), {
-    next: { revalidate: 10 },
+    cache: "no-store",
   });
   if (!res.ok) {
     const error = await res.json();
@@ -19,7 +19,7 @@ export const getData = async () => {
 
 const fetchLeetCode = async () => {
   const res = await fetch(apiUrls.leetcode.get("darkrove"), {
-    next: { revalidate: 10 },
+    cache: "no-store",
   });
   if (!res.ok) {
     const error = await res.json();
@@ -30,7 +30,7 @@ const fetchLeetCode = async () => {
 
 const fetchGithub = async () => {
   const res = await fetch(apiUrls.github.get("darkrove"), {
-    next: { revalidate: 10 },
+    cache: "no-store",
   });
   if (!res.ok) {
     const error = await res.json();
@@ -40,9 +40,7 @@ const fetchGithub = async () => {
 };
 
 const fetchStats = async () => {
-  const res = await fetch(apiUrls.umami.get, {
-    next: { revalidate: 10 },
-  });
+  const res = await fetch(apiUrls.umami.get, { cache: "no-store" });
   if (!res.ok) {
     const error = await res.json();
     throw error;
