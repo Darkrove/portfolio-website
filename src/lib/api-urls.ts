@@ -6,4 +6,8 @@ export const apiUrls = {
   lanyard: {
     get: (id: string) => `https://api.lanyard.rest/v1/users/${id}`,
   },
+  github: {
+    get: (id: string) =>
+      `http://sajjadshaikh.vercel.app/api/github?username=${id}`,
+  },
 };
