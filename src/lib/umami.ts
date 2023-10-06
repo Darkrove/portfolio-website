@@ -1,6 +1,6 @@
 async function getAccessToken() {
   const response = await fetch(
-    "https://umami-darkspace.vercel.app/api/auth/login",
+    "https://u-sajjadshaikh.vercel.app/api/auth/login",
     {
       method: "POST",
       headers: {
@@ -36,7 +36,7 @@ export async function getAnalytics() {
   const resp = await getAccessToken();
 
   return fetch(
-    `https://umami-darkspace.vercel.app/api/websites/6c2507b8-6434-42d4-8775-f0fea81d3b90/stats?start_at=1666463400000&end_at=${Date.now()}`,
+    `https://u-sajjadshaikh.vercel.app/api/websites/6c2507b8-6434-42d4-8775-f0fea81d3b90/stats?start_at=1666463400000&end_at=${Date.now()}`,
     {
       method: "GET",
       headers: {
