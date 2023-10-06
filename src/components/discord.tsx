@@ -40,7 +40,7 @@ const fetchGithub = async () => {
 };
 
 const fetchStats = async () => {
-  const res = await fetch(apiUrls.umami.get(), {
+  const res = await fetch(apiUrls.umami.get, {
     next: { revalidate: 10 },
   });
   if (!res.ok) {
