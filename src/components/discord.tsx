@@ -37,22 +37,25 @@ export async function Discord() {
   return (
     <div className="flex gap-3">
       <p
-        className={clsx({
-          "dark:text-zinc-400 text-zinc-600 m-0 text-xs lg:text-sm md:text-sm":
-            data?.discord_status === "offline" || !data?.discord_status,
-          "dark:text-green-400 text-green-600 m-0 text-xs lg:text-sm md:text-sm":
-            data?.discord_status === "online",
-          "dark:text-yellow-400 text-yellow-600 m-0 text-xs lg:text-sm md:text-sm":
-            data?.discord_status === "idle",
-          "dark:text-red-400 text-red-600 m-0 text-xs lg:text-sm md:text-sm":
-            data?.discord_status === "dnd",
-        })}
+        className={clsx(
+          {
+            "dark:text-zinc-400 text-zinc-600 m-0 text-xs lg:text-sm md:text-sm":
+              data?.discord_status === "offline" || !data?.discord_status,
+            "dark:text-green-400 text-green-600 m-0 text-xs lg:text-sm md:text-sm":
+              data?.discord_status === "online",
+            "dark:text-yellow-400 text-yellow-600 m-0 text-xs lg:text-sm md:text-sm":
+              data?.discord_status === "idle",
+            "dark:text-red-400 text-red-600 m-0 text-xs lg:text-sm md:text-sm":
+              data?.discord_status === "dnd",
+          },
+          "flex justify-center items-center"
+        )}
       >
         <SiDiscord className="inline-block mr-1 w-4 h-4" />{" "}
         {data?.discord_status || "offline"}
       </p>
       <Separator orientation="vertical" />
-      <p className="dark:text-orange-400 text-orange-600 m-0 text-xs lg:text-sm md:text-sm">
+      <p className="dark:text-orange-400 text-orange-600 m-0 text-xs lg:text-sm md:text-sm flex justify-center items-center">
         <SiLeetcode className="inline-block mr-1 w-4 h-4" /> {rank}
       </p>
     </div>
