@@ -28,6 +28,14 @@ export default function RootLayout({
   const pathname = headersList.get("x-invoke-path") || "";
   return (
     <html lang="en">
+      <head>
+        <script
+          async
+          defer
+          data-website-id="6c2507b8-6434-42d4-8775-f0fea81d3b90"
+          src="https://umami-darkspace.vercel.app/umami.js"
+        ></script>
+      </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           {/* <div className="w-[6%] fixed left-0 h-full z-50 hidden lg:block md:block">

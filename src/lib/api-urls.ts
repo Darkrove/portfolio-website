@@ -10,4 +10,7 @@ export const apiUrls = {
     get: (id: string) =>
       `http://sajjadshaikh.vercel.app/api/github?username=${id}`,
   },
+  umami: {
+    get: "http://sajjadshaikh.vercel.app/api/umami",
+  },
 };
