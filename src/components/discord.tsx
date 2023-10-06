@@ -65,7 +65,7 @@ export async function Discord() {
         {data?.discord_status || "offline"}
       </p>
       <Separator orientation="vertical" />
-      <p className="dark:text-purple-400 text-orange-600 m-0 text-xs lg:text-sm md:text-sm flex justify-center items-center">
+      <p className="dark:text-purple-400 text-purple-600 m-0 text-xs lg:text-sm md:text-sm flex justify-center items-center">
         <SiLeetcode className="inline-block mr-1 w-4 h-4" /> {rank}
       </p>
       <Separator orientation="vertical" />
