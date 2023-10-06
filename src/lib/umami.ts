@@ -42,7 +42,7 @@ export async function getAnalytics() {
       headers: {
         Authorization: `Bearer ${resp.token}`,
       },
+      cache: 'no-store'
     },
-    { cache: 'no-store' }
   );
 }
