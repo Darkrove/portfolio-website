@@ -36,7 +36,7 @@ async function getAccessToken() {
   return accessToken;
 }
 
-export async function getAnalytics() {
+async function getAnalytics() {
   const resp = await getAccessToken();
 
   return fetch(
