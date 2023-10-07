@@ -36,13 +36,15 @@ const Repositories = async () => {
         {res.map((repo: any, index: Key | null | undefined) => (
           <Card key={index}>
             <CardHeader>
-              <CardTitle>{repo.name}</CardTitle>
-              <CardDescription>{repo.description}</CardDescription>
+              <CardTitle className="text-lg">{repo.name}</CardTitle>
+              <CardDescription className="text-sm">
+                {repo.description}
+              </CardDescription>
             </CardHeader>
             {/* <CardContent>
               <p>Card Content</p>
             </CardContent> */}
-            <CardFooter>
+            <CardFooter className="text-sm">
               <div className="mt-1 flex items-center justify-start w-full h-6 space-x-4">
                 <p className="flex justify-center items-center">
                   <Icons.circle
