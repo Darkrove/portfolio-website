@@ -75,7 +75,7 @@ export function Stats() {
           <Skeleton className="h-4 w-[30px] md:h-5" />
         </div>
       ) : (
-        <p className="dark:text-purple-400 text-purple-600 m-0 text-xs lg:text-sm md:text-sm flex justify-center items-center">
+        <p className="dark:text-rose-400 text-rose-600 m-0 text-xs lg:text-sm md:text-sm flex justify-center items-center">
           <SiLeetcode className="inline-block mr-1 w-4 h-4" />{" "}
           {leetcodeData.data?.userProfile?.profile?.ranking}
         </p>
@@ -101,7 +101,7 @@ export function Stats() {
           <Skeleton className="h-4 w-[30px] md:h-5" />
         </div>
       ) : (
-        <p className="dark:text-blue-400 text-blue-600 m-0 text-xs lg:text-sm md:text-sm flex justify-center items-center">
+        <p className="dark:text-cyan-400 text-cyan-600 m-0 text-xs lg:text-sm md:text-sm flex justify-center items-center">
           <AiFillEye className="inline-block mr-1 w-4 h-4" />{" "}
           {umamiData.pageviews?.value}
         </p>

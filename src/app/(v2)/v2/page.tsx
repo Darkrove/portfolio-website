@@ -59,7 +59,7 @@ const Page: React.FC<Props> = () => {
             <Button
               size="lg"
               variant="outline"
-              className="dark:text-green-400 text-green-600 hover:text-green-600"
+              className="dark:text-emerald-400 text-emerald-600 hover:text-emerald-600"
             >
               Available for work
               <Icons.hourglass className="ml-2 w-5 h-5" />
