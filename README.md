@@ -16,7 +16,7 @@ Welcome to my personal portfolio website repository! This website showcases my s
 
 While my portfolio website is already functional and informative, there are several features that I plan to add to enhance it:
 
-- [ ] **Stats Section**: Display key statistics such as the number of projects completed and LeetCode stats.
+- [x] **Stats Section**: Display key statistics such as the number of projects completed and LeetCode stats.
 - [ ] **Resume Download**: Allow visitors to download my resume/CV.
 - [ ] **Blog Section**: Share articles, tutorials, or thoughts related to my field.
 - [ ] **Testimonials**: Showcase endorsements or recommendations from colleagues and clients.
