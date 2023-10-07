@@ -11,7 +11,13 @@ import {
   Hourglass,
 } from "lucide-react";
 
-import { FaGraduationCap, FaReact, FaCode, FaJava } from "react-icons/fa";
+import {
+  FaGraduationCap,
+  FaReact,
+  FaCode,
+  FaJava,
+  FaCircle,
+} from "react-icons/fa";
 import {
   SiNextdotjs,
   SiHtml5,
@@ -30,6 +36,7 @@ export const Icons = {
   up: MoveUpRightIcon,
   star: Star,
   link: Link,
+  circle: FaCircle,
   mail: AtSign,
   graduationHat: FaGraduationCap,
   react: FaReact,
