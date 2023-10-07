@@ -14,7 +14,7 @@ import {
 
 interface Props {}
 async function getData() {
-  const res = await fetch("https://ghpr.asrvd.me/darkrove");
+  const res = await fetch("https://ghpr.asrvd.me/darkrove", { cache: 'no-store' });
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
