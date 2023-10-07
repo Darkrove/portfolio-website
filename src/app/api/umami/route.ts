@@ -30,9 +30,6 @@ async function getAccessToken() {
   // Read the response body once and store it in a variable
   const accessToken = await response.json();
 
-  // You can now use the accessToken variable for further processing
-  console.log("Access token:", accessToken);
-
   return accessToken;
 }
 
