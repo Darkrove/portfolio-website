@@ -36,7 +36,7 @@ const Repositories = async () => {
         {res.map((repo: any, index: Key | null | undefined) => (
           <Card key={index}>
             <CardHeader>
-              <CardTitle className="text-lg">{repo.name}</CardTitle>
+              <CardTitle className="text-base">{repo.name}</CardTitle>
               <CardDescription className="text-sm">
                 {repo.description}
               </CardDescription>
@@ -48,13 +48,14 @@ const Repositories = async () => {
               <div className="mt-1 flex items-center justify-start w-full h-6 space-x-4">
                 <p className="flex justify-center items-center">
                   <Icons.circle
-                    className={`w-4 h-4 mr-1 text-[${res.languageColor}]`}
+                    className={`w-4 h-4 mr-1 text-[${repo.languageColor}]`}
                   />{" "}
                   {repo.language}
                 </p>
                 <Separator orientation="vertical" />
                 <p className="flex justify-center items-center">
-                  <Icons.star className="w-4 h-4 mr-1" /> {repo.stars}
+                  <Icons.star className="w-4 h-4 mr-1 text-yellow-500" />{" "}
+                  {repo.stars}
                 </p>
                 <Separator orientation="vertical" />
                 <p className="flex justify-center items-center">

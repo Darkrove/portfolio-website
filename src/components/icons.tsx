@@ -10,7 +10,7 @@ import {
   Twitter,
   Hourglass,
 } from "lucide-react";
-
+import { AiFillStar } from "react-icons/ai";
 import {
   FaGraduationCap,
   FaReact,
@@ -34,7 +34,7 @@ export const Icons = {
   sun: SunMedium,
   moon: Moon,
   up: MoveUpRightIcon,
-  star: Star,
+  star: AiFillStar,
   link: Link,
   circle: FaCircle,
   mail: AtSign,
