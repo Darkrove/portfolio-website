@@ -3,7 +3,7 @@ import { z } from "zod";
 
 export async function GET(request: NextRequest) {
   const { searchParams } = request.nextUrl;
-  const id = searchParams.get("username") || "";
+  const id = searchParams.get("id") || "";
   try {
     const response = await fetch(
       "https://umami-darkspace.vercel.app/api/auth/login",
