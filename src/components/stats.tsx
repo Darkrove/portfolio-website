@@ -34,7 +34,10 @@ export function Stats() {
     data: umamiData = [],
     isLoading: isUmamiLoading,
     error: umamiError,
-  } = useSWR(apiUrls.umami.get, fetcher);
+  } = useSWR(
+    apiUrls.umami.get("6c2507b8-6434-42d4-8775-f0fea81d3b90"),
+    fetcher
+  );
 
   return (
     <div className="flex gap-3">
