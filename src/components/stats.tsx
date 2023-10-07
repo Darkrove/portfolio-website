@@ -103,7 +103,7 @@ export function Stats() {
       ) : (
         <p className="dark:text-blue-400 text-blue-600 m-0 text-xs lg:text-sm md:text-sm flex justify-center items-center">
           <AiFillEye className="inline-block mr-1 w-4 h-4" />{" "}
-          {umamiData.pageviews?.value}
+          {umamiData?.pageviews?.value}
         </p>
       )}
     </div>
