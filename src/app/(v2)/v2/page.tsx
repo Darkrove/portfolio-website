@@ -6,6 +6,7 @@ import Layout from "@/components/layout";
 import { Button } from "@/components/ui/button";
 import Intro from "@/components/intro";
 import Bar from "@/components/bar";
+import { Separator } from "@/ui/separator";
 
 interface Props {}
 
@@ -66,6 +67,16 @@ const Page: React.FC<Props> = () => {
             </Button>
           </div>
         </div>
+        <Separator />
+
+        <div className="flex gap-3 w-full justify-start px-8">
+          <div className="leading-none">
+            <h2 className="dark:text-slate-200 text-slate-900 text-[2.5rem] m-0 font-extrabold capitalize">
+              Tech stack
+            </h2>
+          </div>
+        </div>
+
         {/* <h1
           style={h1Style}
           className="font-extrabold text-2xl text-center uppercase"
