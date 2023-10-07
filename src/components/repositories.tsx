@@ -46,11 +46,10 @@ const Repositories = async () => {
             </CardContent> */}
             <CardFooter className="text-sm">
               <div className="mt-1 flex items-center justify-start w-full h-6 space-x-4">
-                <p className="flex justify-center items-center">
-                  <Icons.circle
-                    className={`w-4 h-4 mr-1 text-[${repo.languageColor}]`}
-                  />{" "}
-                  {repo.language}
+                <p
+                  className={`flex justify-center items-center text-[${repo.languageColor}]`}
+                >
+                  <Icons.circle className="w-4 h-4 mr-1" /> {repo.language}
                 </p>
                 <Separator orientation="vertical" />
                 <p className="flex justify-center items-center">
