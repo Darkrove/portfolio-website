@@ -1,14 +1,11 @@
 import React from "react";
-import Balancer from "react-wrap-balancer";
-import Link from "next/link";
 
 import { Icons } from "@/components/icons";
 import { Stats } from "@/components/stats";
 import Layout from "@/components/layout";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { siteConfig } from "@/config/site";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import Intro from "@/components/intro";
+import Bar from "@/components/bar";
 
 interface Props {}
 
@@ -46,65 +43,10 @@ const Page: React.FC<Props> = () => {
   return (
     <Layout>
       <div className="w-full flex flex-col space-y-4 justify-center items-center py-4 sm:py-8">
-        <div className="framer-shadow dark:bg-slate-900 bg-white">
-          <div id="wrapper" className="flex gap-2 items-center">
-            <Image
-              className="w-6 h-6"
-              src="/avatar.png"
-              alt="logo"
-              width={100}
-              height={100}
-            />
-            <p className="text-sm capitalize ">sajjad</p>
-          </div>
-          <div id="wrapper" className="flex items-center gap-2">
-            <Link
-              className="flex items-center p-1 sm:p-0 sm:py-1 sm:px-2 hover:bg-gray-100 rounded-full transform hover:scale-105 transition-transform duration-300 ease-in-out"
-              href={siteConfig.links.twitter}
-              target="_blank"
-            >
-              <div className="flex justify-center relative group">
-                <Icons.x className="w-5 h-5 sm:mr-1" />
-                <p className="text-sm hidden sm:block">sajjad</p>
-              </div>
-            </Link>
-            <Link
-              className="flex items-center p-1 sm:p-0 sm:py-1 sm:px-2 hover:bg-gray-100 rounded-full transform hover:scale-105 transition-transform duration-300 ease-in-out"
-              href={siteConfig.links.github}
-              target="_blank"
-            >
-              <div className="flex justify-center relative group">
-                <Icons.gitHub className="w-5 h-5 sm:mr-1" />
-                <p className="text-sm hidden sm:block">darkrove</p>
-              </div>
-            </Link>
-          </div>
-        </div>
+        <Bar />
+        <Intro />
+        <Stats />
 
-        <div className="w-full h-full px-8 py-4 flex flex-col justify-center items-center relative">
-          <section className="flex flex-col-reverse lg:flex-row md:flex-row w-full justify-between items-start gap-4 lg:gap-14 md:gap-8 prose">
-            <div className="leading-none">
-              <h2 className="dark:text-slate-200 text-slate-900 text-[2.5rem] m-0 font-extrabold capitalize">
-                {siteConfig.name}
-              </h2>
-              <p className="dark:text-slate-300 text-slate-800 mt-2 mb-4 m-0">
-                {siteConfig.description}
-              </p>
-              <Balancer className="dark:text-slate-400 text-slate-700 text-sm m-0">
-                {siteConfig.bio}
-              </Balancer>
-            </div>
-            <div className="min-w-fit h-full flex items-center justify-center">
-              <Avatar className="w-32 h-32">
-                <AvatarImage src="https://avatars.githubusercontent.com/u/53792139?v=4" />
-                <AvatarFallback>SS</AvatarFallback>
-              </Avatar>
-            </div>
-          </section>
-        </div>
-        <div className="w-full flex justify-start px-8">
-          <Stats />
-        </div>
         <div className="w-full px-8 py-4">
           <div
             id="action"
@@ -114,7 +56,11 @@ const Page: React.FC<Props> = () => {
               Chat With Me
               <Icons.up className="ml-2 w-5 h-5" />
             </Button>
-            <Button size="lg" variant="outline">
+            <Button
+              size="lg"
+              variant="outline"
+              className="dark:text-green-400 text-green-600 hover:text-green-600"
+            >
               Available for work
               <Icons.hourglass className="ml-2 w-5 h-5" />
             </Button>

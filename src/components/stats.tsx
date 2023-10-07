@@ -40,7 +40,7 @@ export function Stats() {
   );
 
   return (
-    <div className="flex gap-3">
+    <div className="flex gap-3 w-full justify-start px-8">
       {isLanyardLoading ? (
         <div className="dark:text-slate-400 text-slate-700 m-0 text-xs lg:text-sm md:text-sm flex justify-center items-center">
           <SiDiscord className="inline-block mr-1 w-4 h-4" />
