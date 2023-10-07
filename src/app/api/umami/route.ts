@@ -1,4 +1,3 @@
-import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 
 const dynamic = "force-dynamic";
@@ -48,7 +47,7 @@ async function getAnalytics() {
   );
 }
 
-export async function GET(request: NextRequest) {
+export async function GET(request: Request) {
   try {
     const response = await fetch(
       "https://umami-darkspace.vercel.app/api/auth/login",
@@ -83,9 +82,9 @@ export async function GET(request: NextRequest) {
   } catch (error) {
     if (error instanceof z.ZodError) {
       console.log(error);
-      return NextResponse.json({ error: error.issues }, { status: 400 });
+      return Response.json({ error: error.issues }, { status: 400 });
     }
-    return NextResponse.json(
+    return Response.json(
       { error, message: "Failed to get the data" },
       { status: 500 }
     );
