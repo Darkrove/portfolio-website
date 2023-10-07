@@ -41,7 +41,7 @@ export function Stats() {
       {isLanyardLoading ? (
         <div className="dark:text-slate-400 text-slate-700 m-0 text-xs lg:text-sm md:text-sm flex justify-center items-center">
           <SiDiscord className="inline-block mr-1 w-4 h-4" />
-          <Skeleton className="h-4 w-[40px] md:h-5" />
+          <Skeleton className="h-4 w-[50px] md:h-5" />
         </div>
       ) : (
         <p
@@ -69,7 +69,7 @@ export function Stats() {
       {isLeetcodeLoading ? (
         <div className="dark:text-slate-400 text-slate-700 m-0 text-xs lg:text-sm md:text-sm flex justify-center items-center">
           <SiLeetcode className="inline-block mr-1 w-4 h-4" />
-          <Skeleton className="h-4 w-[60px] md:h-5" />
+          <Skeleton className="h-4 w-[50px] md:h-5" />
         </div>
       ) : (
         <p className="dark:text-purple-400 text-purple-600 m-0 text-xs lg:text-sm md:text-sm flex justify-center items-center">
@@ -82,7 +82,7 @@ export function Stats() {
       {isGithubLoading ? (
         <div className="dark:text-slate-400 text-slate-700 m-0 text-xs lg:text-sm md:text-sm flex justify-center items-center">
           <AiFillStar className="inline-block mr-1 w-4 h-4" />
-          <Skeleton className="h-4 w-[30px] md:h-5" />
+          <Skeleton className="h-4 w-[50px] md:h-5" />
         </div>
       ) : (
         <p className="dark:text-orange-400 text-orange-600 m-0 text-xs lg:text-sm md:text-sm flex justify-center items-center">
@@ -95,7 +95,7 @@ export function Stats() {
       {isUmamiLoading ? (
         <div className="dark:text-slate-400 text-slate-700 m-0 text-xs lg:text-sm md:text-sm flex justify-center items-center">
           <AiFillEye className="inline-block mr-1 w-4 h-4" />
-          <Skeleton className="h-4 w-[30px] md:h-5" />
+          <Skeleton className="h-4 w-[50px] md:h-5" />
         </div>
       ) : (
         <p className="dark:text-blue-400 text-blue-600 m-0 text-xs lg:text-sm md:text-sm flex justify-center items-center">
