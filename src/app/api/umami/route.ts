@@ -1,6 +1,9 @@
+import { NextRequest } from "next/server";
 import { z } from "zod";
 
-export async function GET(request: Request) {
+export async function GET(request: NextRequest) {
+  const { searchParams } = request.nextUrl;
+  const id = searchParams.get("username") || "";
   try {
     const response = await fetch(
       "https://umami-darkspace.vercel.app/api/auth/login",
@@ -18,7 +21,7 @@ export async function GET(request: Request) {
 
     const accessToken = await response.json();
     const resp = await fetch(
-      `https://umami-darkspace.vercel.app/api/websites/6c2507b8-6434-42d4-8775-f0fea81d3b90/stats?start_at=1666463400000&end_at=${Date.now()}`,
+      `https://umami-darkspace.vercel.app/api/websites/${id}/stats?start_at=1666463400000&end_at=${Date.now()}`,
       {
         method: "GET",
         headers: {

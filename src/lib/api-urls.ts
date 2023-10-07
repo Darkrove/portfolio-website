@@ -1,14 +1,14 @@
 export const apiUrls = {
   leetcode: {
-    get: (id: string) => `/api/leetcode?username=${id}`,
+    get: (username: string) => `/api/leetcode?username=${username}`,
   },
   lanyard: {
     get: (id: string) => `https://api.lanyard.rest/v1/users/${id}`,
   },
   github: {
-    get: (id: string) => `/api/github?username=${id}`,
+    get: (username: string) => `/api/github?username=${username}`,
   },
   umami: {
-    get: "/api/umami",
+    get: (id: string) => `/api/umami?id=${id}`,
   },
 };
