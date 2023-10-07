@@ -3,7 +3,7 @@ import Balancer from "react-wrap-balancer";
 import Link from "next/link";
 
 import { Icons } from "@/components/icons";
-import { Discord } from "@/components/discord";
+import { Stats } from "@/components/stats";
 import Layout from "@/components/layout";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { siteConfig } from "@/config/site";
@@ -103,7 +103,7 @@ const Page: React.FC<Props> = () => {
           </section>
         </div>
         <div className="w-full flex justify-start px-8">
-          <Discord />
+          <Stats />
         </div>
         <div className="w-full px-8 py-4">
           <div
