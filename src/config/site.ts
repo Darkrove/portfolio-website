@@ -10,10 +10,20 @@ export const siteConfig = {
       href: "/",
     },
   ],
-  url: "https://sajjadshaikh.vercel.app/",
+  url: "https://sajjadshaikh.vercel.app",
   ogImage: "https://sajjadshaikh.vercel.app/opengraph-image.jpg",
   links: {
     twitter: "https://twitter.com/sajjads72619701",
     github: "https://github.com/Darkrove",
   },
 };
+
+const SITE_DOMAIN =
+  process.env.NEXT_PUBLIC_SITE_DOMAIN ||
+  process.env.VERCEL_URL ||
+  siteConfig.url;
+
+export const BASE_URL =
+  process.env.NODE_ENV === "production"
+    ? `https://${SITE_DOMAIN}`
+    : "http://localhost:3000";
