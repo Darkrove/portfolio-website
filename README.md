@@ -2,7 +2,8 @@
 
 Welcome to my personal portfolio website repository! This website showcases my skills, projects, and links, providing an overview of my professional profile.
 
-![Portfolio Website Preview](https://github.com/Darkrove/portfolio-website/assets/53792139/ac96f73b-848e-46a4-b4ce-29ba95f153e0)
+![image](https://github.com/Darkrove/portfolio-website/assets/53792139/bd1ca08b-18f1-47ea-91fb-f9b90d368274)
+![image](https://github.com/Darkrove/portfolio-website/assets/53792139/b5e55dab-13bb-4872-a556-62f12945a87d)
 
 ## Features
 
