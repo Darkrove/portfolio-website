@@ -16,6 +16,7 @@ import {
   FaReact,
   FaCode,
   FaJava,
+  FaHourglassEnd,
   FaCircle,
 } from "react-icons/fa";
 import {
@@ -71,7 +72,7 @@ export const Icons = {
     </svg>
   ),
   next: SiNextdotjs,
-  hourglass: Hourglass,
+  hourglass: FaHourglassEnd,
   whatsapp: (props: LucideProps) => (
     <svg
       viewBox="0 0 24 24"
