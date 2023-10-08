@@ -47,12 +47,12 @@ export default async function Home() {
                   className="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square"
                   aria-hidden="true"
                 >
-                  <div className="absolute inset-0 translate-z-0 dark:bg-slate-900 bg-slate-200 rounded-full blur-[80px]"></div>
+                  <div className="absolute inset-0 translate-z-0 dark:bg-zinc-900 bg-zinc-200 rounded-full blur-[80px]"></div>
                 </div>
                 <div className="flex flex-col justify-center h-full items-center text-center gap-1">
                   <div className="relative object-contain object-center inline-flex">
                     <div
-                      className="w-[40%] h-[40%] absolute inset-0 m-auto -translate-y-[10%] blur-3xl -z-10 rounded-full bg-indigo-600"
+                      className="w-[40%] h-[40%] absolute inset-0 m-auto -translate-y-[10%] blur-3xl -z-10 rounded-full bg-gray-600"
                       aria-hidden="true"
                     ></div>
                   </div>
@@ -68,14 +68,14 @@ export default async function Home() {
                           <h2 className="text-foreground text-2xl m-0 font-semibold">
                             Hi, I&apos;m Sajjad.
                           </h2>
-                          <h2 className="text-slate-600 text-md m-0 font-semibold text-left">
+                          <h2 className="text-zinc-600 text-md m-0 font-semibold text-left">
                             web developer
                           </h2>
                         </div>
                       </div>
                       <div className="justify-end">
                         <a
-                          className="inline-flex justify-center items-center whitespace-nowrap rounded-lg dark:bg-slate-900 bg-slate-200 hover:bg-background border dark:border-slate-800 border-slate-100 p-2 text-sm font-medium dark:dark:text-slate-400 text-slate-600 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-700 transition-colors duration-150"
+                          className="inline-flex justify-center items-center whitespace-nowrap rounded-lg dark:bg-zinc-900 bg-zinc-200 hover:bg-background border dark:border-zinc-800 border-zinc-100 p-2 text-sm font-medium dark:dark:text-zinc-400 text-zinc-600 focus-visible:outline-none focus-visible:ring focus-visible:ring-gray-300 dark:focus-visible:ring-zinc-700 transition-colors duration-150"
                           href="mailto:samaralishaikh212@gmail.com"
                           target="_blank"
                         >
@@ -87,7 +87,7 @@ export default async function Home() {
                     <h2 className="text-foreground text-2xl m-0 font-semibold mt-4 text-left">
                       Passionate to pursue the technology.
                     </h2>
-                    <h2 className="text-slate-600 text-lg m-0 mt-4 text-left">
+                    <h2 className="text-zinc-600 text-lg m-0 mt-4 text-left">
                       I am a self-taught 👨‍💻 web developer and programmer who
                       recently pursued a computer science degree 🎓. I started
                       coding in the 11th grade and discovered my passion for 🌐
@@ -100,12 +100,12 @@ export default async function Home() {
                   {/* <div className="grow mb-5">
                     <h2 className="text-foreground text-4xl m-0 font-extrabold">
                       Hi, I&apos;m{" "}
-                      <span className="dark:text-slate-400 text-slate-600">Sajjad</span>
+                      <span className="dark:text-zinc-400 text-zinc-600">Sajjad</span>
                     </h2>
                     <h2 className="text-xl text-foreground font-bold mb-1">
                       Amazing Integration
                     </h2>
-                    <p className="text-sm text-slate-600">
+                    <p className="text-sm text-zinc-600">
                       Quickly apply filters to refine your issues lists and
                       create custom views.
                     </p>
@@ -121,7 +121,7 @@ export default async function Home() {
                   className="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square"
                   aria-hidden="true"
                 >
-                  <div className="absolute inset-0 translate-z-0 dark:bg-slate-900 bg-slate-200 rounded-full blur-[80px]"></div>
+                  <div className="absolute inset-0 translate-z-0 dark:bg-zinc-900 bg-zinc-200 rounded-full blur-[80px]"></div>
                 </div>
                 <div className="flex flex-col h-full justify-center items-center text-center">
                   <div className="relative w-full h-full">
@@ -133,7 +133,7 @@ export default async function Home() {
                         {/* Your content goes here */}
                         <div className="relative object-contain object-center inline-flex">
                           <div
-                            className="w-[40%] h-[40%] absolute inset-0 m-auto -translate-y-[10%] blur-3xl -z-10 rounded-full bg-indigo-600"
+                            className="w-[40%] h-[40%] absolute inset-0 m-auto -translate-y-[10%] blur-3xl -z-10 rounded-full bg-gray-600"
                             aria-hidden="true"
                           ></div>
                           <Image
@@ -151,7 +151,7 @@ export default async function Home() {
                   {/* Image */}
                   {/* <div className="relative object-contain object-center inline-flex">
                     <div
-                      className="w-[40%] h-[40%] absolute inset-0 m-auto -translate-y-[10%] blur-3xl -z-10 rounded-full bg-indigo-600"
+                      className="w-[40%] h-[40%] absolute inset-0 m-auto -translate-y-[10%] blur-3xl -z-10 rounded-full bg-gray-600"
                       aria-hidden="true"
                     ></div>
                     <Image
@@ -167,17 +167,17 @@ export default async function Home() {
                     <h2 className="text-xl text-foreground font-bold mb-1">
                       Amazing Integration
                     </h2>
-                    <p className="text-sm text-slate-600">
+                    <p className="text-sm text-zinc-600">
                       Quickly apply filters to refine your issues lists and
                       create custom views.
                     </p>
                   </div>
                   <a
-                    className="inline-flex justify-center items-center whitespace-nowrap rounded-lg dark:bg-slate-900 bg-slate-200 hover:bg-background border dark:border-slate-800 border-slate-100 px-3 py-1.5 text-sm font-medium dark:text-slate-400 text-slate-600 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-700 transition-colors duration-150"
+                    className="inline-flex justify-center items-center whitespace-nowrap rounded-lg dark:bg-zinc-900 bg-zinc-200 hover:bg-background border dark:border-zinc-800 border-zinc-100 px-3 py-1.5 text-sm font-medium dark:text-zinc-400 text-zinc-600 focus-visible:outline-none focus-visible:ring focus-visible:ring-gray-300 dark:focus-visible:ring-zinc-700 transition-colors duration-150"
                     href="#0"
                   >
                     <svg
-                      className="fill-slate-600 mr-2"
+                      className="fill-zinc-600 mr-2"
                       xmlns="http://www.w3.org/2000/svg"
                       width="16"
                       height="14"
@@ -197,13 +197,13 @@ export default async function Home() {
                   className="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square"
                   aria-hidden="true"
                 >
-                  <div className="absolute inset-0 translate-z-0 dark:bg-slate-900 bg-slate-200 rounded-full blur-[80px]"></div>
+                  <div className="absolute inset-0 translate-z-0 dark:bg-zinc-900 bg-zinc-200 rounded-full blur-[80px]"></div>
                 </div>
                 <div className="flex flex-col h-full justify-center items-center text-center">
                   {/* Image */}
                   <div className="relative inline-flex">
                     <div
-                      className="w-[40%] h-[40%] absolute inset-0 m-auto -translate-y-[10%] blur-3xl -z-10 rounded-full bg-indigo-600"
+                      className="w-[40%] h-[40%] absolute inset-0 m-auto -translate-y-[10%] blur-3xl -z-10 rounded-full bg-gray-600"
                       aria-hidden="true"
                     ></div>
                     <Image
@@ -221,7 +221,7 @@ export default async function Home() {
                     </h2>
                   </div>
                   <Link
-                    className="inline-flex justify-center items-center whitespace-nowrap rounded-lg dark:bg-slate-900 bg-slate-200 hover:bg-background border dark:border-slate-800 border-slate-100 px-3 py-1.5 text-sm font-medium dark:text-slate-400 text-slate-600 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-700 transition-colors duration-150"
+                    className="inline-flex justify-center items-center whitespace-nowrap rounded-lg dark:bg-zinc-900 bg-zinc-200 hover:bg-background border dark:border-zinc-800 border-zinc-100 px-3 py-1.5 text-sm font-medium dark:text-zinc-400 text-zinc-600 focus-visible:outline-none focus-visible:ring focus-visible:ring-gray-300 dark:focus-visible:ring-zinc-700 transition-colors duration-150"
                     href="https://github.com/Darkrove"
                     target="_blank"
                   >
@@ -239,13 +239,13 @@ export default async function Home() {
                   className="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square"
                   aria-hidden="true"
                 >
-                  <div className="absolute inset-0 translate-z-0 dark:bg-slate-900 bg-slate-200 rounded-full blur-[80px]"></div>
+                  <div className="absolute inset-0 translate-z-0 dark:bg-zinc-900 bg-zinc-200 rounded-full blur-[80px]"></div>
                 </div>
                 <div className="flex flex-col h-full justify-center items-center text-center">
                   {/* Image */}
                   <div className="relative inline-flex">
                     <div
-                      className="w-[40%] h-[40%] absolute inset-0 m-auto -translate-y-[10%] blur-3xl -z-10 rounded-full bg-indigo-600"
+                      className="w-[40%] h-[40%] absolute inset-0 m-auto -translate-y-[10%] blur-3xl -z-10 rounded-full bg-gray-600"
                       aria-hidden="true"
                     ></div>
                     <Image
@@ -263,7 +263,7 @@ export default async function Home() {
                     </h2>
                   </div>
                   <Link
-                    className="inline-flex justify-center items-center whitespace-nowrap rounded-lg dark:bg-slate-900 bg-slate-200 hover:bg-background border dark:border-slate-800 border-slate-100 px-3 py-1.5 text-sm font-medium dark:text-slate-400 text-slate-600 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-700 transition-colors duration-150"
+                    className="inline-flex justify-center items-center whitespace-nowrap rounded-lg dark:bg-zinc-900 bg-zinc-200 hover:bg-background border dark:border-zinc-800 border-zinc-100 px-3 py-1.5 text-sm font-medium dark:text-zinc-400 text-zinc-600 focus-visible:outline-none focus-visible:ring focus-visible:ring-gray-300 dark:focus-visible:ring-zinc-700 transition-colors duration-150"
                     href="https://twitter.com/sajjads72619701"
                     target="_blank"
                   >
@@ -281,13 +281,13 @@ export default async function Home() {
                   className="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square"
                   aria-hidden="true"
                 >
-                  <div className="absolute inset-0 translate-z-0 dark:bg-slate-900 bg-slate-200 rounded-full blur-[80px]"></div>
+                  <div className="absolute inset-0 translate-z-0 dark:bg-zinc-900 bg-zinc-200 rounded-full blur-[80px]"></div>
                 </div>
                 <div className="flex flex-col h-full items-center text-center">
                   {/* Image */}
                   <div className="relative inline-flex">
                     <div
-                      className="w-[40%] h-[40%] absolute inset-0 m-auto -translate-y-[10%] blur-3xl -z-10 rounded-full bg-indigo-600"
+                      className="w-[40%] h-[40%] absolute inset-0 m-auto -translate-y-[10%] blur-3xl -z-10 rounded-full bg-gray-600"
                       aria-hidden="true"
                     ></div>
                     <Image
@@ -305,7 +305,7 @@ export default async function Home() {
                     </h2>
                   </div>
                   <Link
-                    className="inline-flex justify-center items-center whitespace-nowrap rounded-lg dark:bg-slate-900 bg-slate-200 hover:bg-background border dark:border-slate-800 border-slate-100 px-3 py-1.5 text-sm font-medium dark:text-slate-400 text-slate-600 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-700 transition-colors duration-150"
+                    className="inline-flex justify-center items-center whitespace-nowrap rounded-lg dark:bg-zinc-900 bg-zinc-200 hover:bg-background border dark:border-zinc-800 border-zinc-100 px-3 py-1.5 text-sm font-medium dark:text-zinc-400 text-zinc-600 focus-visible:outline-none focus-visible:ring focus-visible:ring-gray-300 dark:focus-visible:ring-zinc-700 transition-colors duration-150"
                     href="https://www.linkedin.com/in/sajjad-shaikh-18a0811ab/"
                     target="_blank"
                   >
@@ -329,13 +329,13 @@ export default async function Home() {
                     className="absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/2 aspect-square"
                     aria-hidden="true"
                   >
-                    <div className="absolute inset-0 translate-z-0 dark:bg-slate-900 bg-slate-200 rounded-full blur-[80px]"></div>
+                    <div className="absolute inset-0 translate-z-0 dark:bg-zinc-900 bg-zinc-200 rounded-full blur-[80px]"></div>
                   </div>
                   <div className="flex flex-col h-full items-center text-center">
                     {/* Image */}
                     <div className="relative inline-flex">
                       <div
-                        className="w-[40%] h-[40%] absolute inset-0 m-auto -translate-y-[10%] blur-3xl -z-10 rounded-full bg-indigo-600"
+                        className="w-[40%] h-[40%] absolute inset-0 m-auto -translate-y-[10%] blur-3xl -z-10 rounded-full bg-gray-600"
                         aria-hidden="true"
                       ></div>
                       <Image
@@ -351,7 +351,7 @@ export default async function Home() {
                       <h2 className="text-xl text-foreground font-bold mb-1">
                         {repo.name}
                       </h2>
-                      <p className="text-sm text-slate-600 ">
+                      <p className="text-sm text-zinc-600 ">
                         {repo.description}
                       </p>
                       <div className="mt-1 flex items-center justify-center w-full h-6 space-x-4">
@@ -365,7 +365,7 @@ export default async function Home() {
                       </div>
                     </div>
                     <Link
-                      className="inline-flex justify-center items-center whitespace-nowrap rounded-lg dark:bg-slate-900 bg-slate-200 hover:bg-background border dark:border-slate-800 border-slate-100 px-3 py-1.5 text-sm font-medium dark:text-slate-400 text-slate-600 focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-700 transition-colors duration-150"
+                      className="inline-flex justify-center items-center whitespace-nowrap rounded-lg dark:bg-zinc-900 bg-zinc-200 hover:bg-background border dark:border-zinc-800 border-zinc-100 px-3 py-1.5 text-sm font-medium dark:text-zinc-400 text-zinc-600 focus-visible:outline-none focus-visible:ring focus-visible:ring-gray-300 dark:focus-visible:ring-zinc-700 transition-colors duration-150"
                       href={`https://github.com/Darkrove/${repo.name}`}
                       target="_blank"
                     >

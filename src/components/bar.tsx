@@ -9,7 +9,7 @@ interface Props {}
 
 const Bar = () => {
   return (
-    <div className="framer-shadow dark:bg-slate-900 bg-white">
+    <div className="framer-shadow dark:bg-zinc-900 bg-white">
       <div id="wrapper" className="flex gap-2 items-center">
         <Image
           className="w-6 h-6"

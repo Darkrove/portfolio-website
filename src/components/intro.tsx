@@ -10,13 +10,13 @@ const Intro = () => {
     <div className="w-full h-full px-8 py-4 flex flex-col justify-center items-center relative">
       <section className="flex flex-col-reverse lg:flex-row md:flex-row w-full justify-between items-start gap-4 lg:gap-14 md:gap-8 prose">
         <div className="leading-none">
-          <h2 className="dark:text-slate-200 text-slate-900 text-[2.5rem] m-0 font-extrabold capitalize">
+          <h2 className="dark:text-zinc-200 text-zinc-900 text-[2.5rem] m-0 font-extrabold capitalize">
             {siteConfig.name}
           </h2>
-          <p className="dark:text-slate-300 text-slate-800 mt-2 mb-4 m-0">
+          <p className="dark:text-zinc-300 text-zinc-800 mt-2 mb-4 m-0">
             {siteConfig.description}
           </p>
-          <Balancer className="dark:text-slate-400 text-slate-700 text-sm m-0">
+          <Balancer className="dark:text-zinc-400 text-zinc-700 text-sm m-0">
             {siteConfig.bio}
           </Balancer>
         </div>

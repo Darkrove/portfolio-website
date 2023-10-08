@@ -51,7 +51,7 @@ const Stack = () => {
   return (
     <div className="flex flex-col gap-3 w-full justify-start px-8">
       <div className="leading-none">
-        <h2 className="dark:text-slate-200 text-slate-900 text-[1.5rem] m-0 font-bold capitalize">
+        <h2 className="dark:text-zinc-200 text-zinc-900 text-[1.5rem] m-0 font-bold capitalize">
           Tech Stack
         </h2>
       </div>
@@ -60,7 +60,7 @@ const Stack = () => {
           <h2 className="dark:text-zinc-400 text-zinc-600 text-[1rem] m-0 font-bold capitalize">
             Frameworks
           </h2>
-          <div className="pt-5 flex flex-col justify-start text-sm dark:text-slate-400 text-slate-700">
+          <div className="pt-5 flex flex-col justify-start text-sm dark:text-zinc-400 text-zinc-700">
             {techStack.frameworks.map((language, index) => (
               <p key={index} className="flex items-center">
                 {language.icon()}
@@ -73,7 +73,7 @@ const Stack = () => {
           <h2 className="dark:text-zinc-400 text-zinc-600 text-[1rem] m-0 font-bold capitalize">
             Javascript UI
           </h2>
-          <div className="pt-5 flex flex-col justify-start text-sm dark:text-slate-400 text-slate-700">
+          <div className="pt-5 flex flex-col justify-start text-sm dark:text-zinc-400 text-zinc-700">
             {techStack.javascript.map((language, index) => (
               <p key={index} className="flex items-center">
                 {language.icon()}
@@ -86,7 +86,7 @@ const Stack = () => {
           <h2 className="dark:text-zinc-400 text-zinc-600 text-[1rem] m-0 font-bold capitalize">
             Languages
           </h2>
-          <div className="pt-5 flex gap-2 flex-col justify-start text-sm dark:text-slate-400 text-slate-700">
+          <div className="pt-5 flex gap-2 flex-col justify-start text-sm dark:text-zinc-400 text-zinc-700">
             {techStack.languages.map((language, index) => (
               <p key={index} className="flex items-center">
                 {language.icon()}
@@ -99,7 +99,7 @@ const Stack = () => {
           <h2 className="dark:text-zinc-400 text-zinc-600 text-[1rem] m-0 font-bold capitalize">
             Templating Languages
           </h2>
-          <div className="pt-5 flex gap-2 flex-col justify-start text-sm dark:text-slate-400 text-slate-700">
+          <div className="pt-5 flex gap-2 flex-col justify-start text-sm dark:text-zinc-400 text-zinc-700">
             {techStack.templates.map((language, index) => (
               <p key={index} className="flex items-center">
                 {language.icon()}
