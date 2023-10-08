@@ -339,15 +339,15 @@ export default async function Home() {
                         aria-hidden="true"
                       ></div>
                       <Image
-                        className="inline-flex w-full"
-                        src={`/${repo.name}.png`}
+                        className="w-full rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)] "
+                        src={`/${repo.name}-v2.png`}
                         width={200}
                         height={200}
                         alt="Card 03"
                       />
                     </div>
                     {/* Text */}
-                    <div className="grow mb-5">
+                    <div className="grow my-5">
                       <h2 className="text-xl text-foreground font-bold mb-1">
                         {repo.name}
                       </h2>
