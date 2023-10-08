@@ -11,10 +11,13 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Image from "next/image";
 
 interface Props {}
 async function getData() {
-  const res = await fetch("https://ghpr.asrvd.me/darkrove", { cache: 'no-store' });
+  const res = await fetch("https://ghpr.asrvd.me/darkrove", {
+    cache: "no-store",
+  });
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
@@ -41,9 +44,15 @@ const Repositories = async () => {
                 {repo.description}
               </CardDescription>
             </CardHeader>
-            {/* <CardContent>
-              <p>Card Content</p>
-            </CardContent> */}
+            <CardContent>
+              <Image
+                src={`/${repo.name}-v2.png`}
+                alt="repo image"
+                width={1000}
+                height={1000}
+                className="w-full rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)] "
+              />
+            </CardContent>
             <CardFooter className="text-sm">
               <div className="mt-1 flex items-center justify-start w-full h-6 space-x-4">
                 <p
