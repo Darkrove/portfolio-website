@@ -13,8 +13,9 @@ export async function GET(
   _: Request,
   context: { params: { photoId: string } }
 ) {
+  const id = context.params.photoId;
   const [photo, { fontFamily }] = await Promise.all([
-    getPhotoCached(context.params.photoId),
+    getPhotoCached(id),
     getIBMPlexMonoMedium(),
   ]);
   if (!photo) {
@@ -24,6 +25,7 @@ export async function GET(
   const { width, height } = IMAGE_OG_SIZE;
 
   return new ImageResponse(
-    <PhotoImageResponse {...{ photo, width, height, fontFamily }} />
+    <PhotoImageResponse {...{ photo, id, width, height, fontFamily }} />,
+    { height, width }
   );
 }

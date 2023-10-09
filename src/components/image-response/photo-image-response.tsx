@@ -3,28 +3,36 @@
 
 import { NextImageWidth, getNextImageUrlForRequest } from "@/utility/image";
 import { AiFillApple } from "react-icons/ai";
-import { BiGitRepoForked, BiSolidStar, BiSolidCircle } from "react-icons/bi";
+import { BiGitRepoForked, BiSolidStar, BiSolidCircle, BiLogoGithub } from "react-icons/bi";
 import ImageCaption from "./image-caption";
 import ImageContainer from "./image-container";
 import { Icons } from "../icons";
 
 export default function PhotoImageResponse({
   photo,
+  id,
   width,
   height,
   fontFamily,
   imagePosition = "center",
 }: {
   photo: string;
+  id: string;
   width: NextImageWidth;
   height: number;
   imagePosition?: "center" | "top";
   fontFamily?: string;
 }) {
   let count = 1;
-  const nextImageWidth = count <= 2 ? 1080 : 640;
+  const nextImageWidth = count <= 2 ? 1200 : 640;
   return (
     <ImageContainer {...{ width, height }}>
+       <ImageCaption {...{ position: "top", width, height, fontFamily }}>
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <BiLogoGithub />
+            {id}
+          </div>
+        </ImageCaption>
       <div
         style={{
           display: "flex",
@@ -47,11 +55,6 @@ export default function PhotoImageResponse({
         />
       </div>
       <ImageCaption {...{ position: "bottom", width, height, fontFamily }}>
-        {photo === "Apple" && (
-          <div style={{ display: "flex", gap: "8px" }}>
-            <AiFillApple />
-          </div>
-        )}
         <div style={{ display: "flex", alignItems: "center" }}>
           <BiSolidCircle />
           Javascript

@@ -38,13 +38,13 @@ export default function ImageCaption({
   if (isTopPosition) {
     captionStyles.top = 0;
     captionStyles.paddingBottom = height * 0.6; // Reverse padding
-    captionStyles.paddingTop = height * 0.08;
-    captionStyles.paddingLeft = captionStyles.paddingRight = height * 0.0875;
+    captionStyles.paddingTop = height * 0.05;
+    captionStyles.paddingLeft = captionStyles.paddingRight = height * 0.0575;
   } else {
     captionStyles.bottom = 0;
-    captionStyles.paddingBottom = height * 0.08;
+    captionStyles.paddingBottom = height * 0.05;
     captionStyles.paddingTop = height * 0.6;
-    captionStyles.paddingLeft = captionStyles.paddingRight = height * 0.0875;
+    captionStyles.paddingLeft = captionStyles.paddingRight = height * 0.0575;
   }
 
   return (
