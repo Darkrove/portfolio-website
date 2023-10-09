@@ -11,6 +11,7 @@ export const siteConfig = {
     },
   ],
   url: "https://sajjadshaikh.vercel.app",
+  domain: "sajjadshaikh.vercel.app",
   ogImage: "https://sajjadshaikh.vercel.app/opengraph-image.jpg",
   links: {
     twitter: "https://twitter.com/sajjads72619701",
@@ -18,7 +19,7 @@ export const siteConfig = {
   },
 };
 
-const SITE_DOMAIN = process.env.VERCEL_URL || siteConfig.url;
+const SITE_DOMAIN = process.env.VERCEL_URL || siteConfig.domain;
 
 export const BASE_URL =
   process.env.NODE_ENV === "production"
