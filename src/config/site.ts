@@ -19,7 +19,7 @@ export const siteConfig = {
   },
 };
 
-const SITE_DOMAIN = process.env.VERCEL_URL || siteConfig.domain;
+const SITE_DOMAIN = siteConfig.domain;
 
 export const BASE_URL =
   process.env.NODE_ENV === "production"
