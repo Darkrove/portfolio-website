@@ -20,3 +20,19 @@ export const getNextImageUrlForRequest = (
 
   return url.toString();
 };
+
+export const getNextImageUrl = (
+  imageUrl: string,
+  language: string,
+  star: string,
+  fork: string,
+  baseUrl = BASE_URL
+) => {
+  const url = new URL(`${baseUrl}/${imageUrl}`);
+
+  url.searchParams.append("language", language.toString());
+  url.searchParams.append("star", star.toString());
+  url.searchParams.append("fork", fork.toString());
+
+  return url.toString();
+};

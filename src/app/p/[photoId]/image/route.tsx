@@ -1,7 +1,7 @@
 import { IMAGE_OG_SIZE } from "@/constants/image";
 import PhotoImageResponse from "@/components/image-response/photo-image-response";
 import { getIBMPlexMonoMedium } from "@/config/font";
-import { ImageResponse } from "next/server";
+import { ImageResponse, NextRequest } from "next/server";
 
 const getPhotoCached = (id: string) => {
   return `/${id}-v2.png`;
@@ -10,10 +10,14 @@ const getPhotoCached = (id: string) => {
 export const runtime = "edge";
 
 export async function GET(
-  _: Request,
-  context: { params: { photoId: string } }
+  _: NextRequest,
+  context: { params: { photoId: string }; searchParams: {} }
 ) {
   const id = context.params.photoId;
+  const { searchParams } = _.nextUrl;
+  const language = searchParams.get("language") || "0";
+  const star = searchParams.get("star") || "0";
+  const fork = searchParams.get("fork") || "0";
   const [photo, { fontFamily }] = await Promise.all([
     getPhotoCached(id),
     getIBMPlexMonoMedium(),
@@ -25,7 +29,11 @@ export async function GET(
   const { width, height } = IMAGE_OG_SIZE;
 
   return new ImageResponse(
-    <PhotoImageResponse {...{ photo, id, width, height, fontFamily }} />,
+    (
+      <PhotoImageResponse
+        {...{ photo, id, width, height, fontFamily, language, star, fork }}
+      />
+    ),
     { height, width }
   );
 }

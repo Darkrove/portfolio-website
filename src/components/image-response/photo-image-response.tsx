@@ -3,7 +3,12 @@
 
 import { NextImageWidth, getNextImageUrlForRequest } from "@/utility/image";
 import { AiFillApple } from "react-icons/ai";
-import { BiGitRepoForked, BiSolidStar, BiSolidCircle, BiLogoGithub } from "react-icons/bi";
+import {
+  BiGitRepoForked,
+  BiSolidStar,
+  BiSolidCircle,
+  BiLogoGithub,
+} from "react-icons/bi";
 import ImageCaption from "./image-caption";
 import ImageContainer from "./image-container";
 import { Icons } from "../icons";
@@ -15,6 +20,9 @@ export default function PhotoImageResponse({
   height,
   fontFamily,
   imagePosition = "center",
+  language,
+  star,
+  fork,
 }: {
   photo: string;
   id: string;
@@ -22,17 +30,14 @@ export default function PhotoImageResponse({
   height: number;
   imagePosition?: "center" | "top";
   fontFamily?: string;
+  language: string;
+  star: string;
+  fork: string;
 }) {
   let count = 1;
   const nextImageWidth = count <= 2 ? 1200 : 640;
   return (
     <ImageContainer {...{ width, height }}>
-       <ImageCaption {...{ position: "top", width, height, fontFamily }}>
-          <div style={{ display: "flex", alignItems: "center" }}>
-            <BiLogoGithub />
-            {id}
-          </div>
-        </ImageCaption>
       <div
         style={{
           display: "flex",
@@ -56,15 +61,24 @@ export default function PhotoImageResponse({
       </div>
       <ImageCaption {...{ position: "bottom", width, height, fontFamily }}>
         <div style={{ display: "flex", alignItems: "center" }}>
+          <BiLogoGithub />
+          {id}
+        </div>
+        <div style={{ display: "flex", alignItems: "center" }}>
           <BiSolidCircle />
-          Javascript
+          {language.toLowerCase() === "typescript"
+            ? "ts"
+            : language.toLowerCase() === "javascript"
+            ? "js"
+            : language}
         </div>
         <div style={{ display: "flex", alignItems: "center" }}>
           <BiSolidStar />
-          50
+          {star}
         </div>
         <div style={{ display: "flex", alignItems: "center" }}>
-          <BiGitRepoForked />0
+          <BiGitRepoForked />
+          {fork}
         </div>
       </ImageCaption>
     </ImageContainer>
