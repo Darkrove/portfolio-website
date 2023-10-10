@@ -12,6 +12,7 @@ export const siteConfig = {
   ],
   url: "https://sajjadshaikh.vercel.app",
   domain: "sajjadshaikh.vercel.app",
+  mail: "samaralishaikh212@gmail.com",
   ogImage: "https://sajjadshaikh.vercel.app/opengraph-image.jpg",
   links: {
     twitter: "https://twitter.com/sajjads72619701",

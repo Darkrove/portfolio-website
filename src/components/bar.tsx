@@ -1,11 +1,27 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 import { siteConfig } from "@/config/site";
 import { Icons } from "@/components/icons";
 
-interface Props {}
+interface LinkCompProps {
+  url: string;
+  target: string;
+  children: ReactNode;
+}
+
+const LinkComp = ({ url, target, children }: LinkCompProps) => {
+  return (
+    <Link
+      target={target}
+      href={url}
+      className="flex items-center p-1 hover:bg-zinc-100 dark:hover:bg-zinc-600 rounded-full transform hover:scale-105 transition-transform duration-300 ease-in-out"
+    >
+      <div className="flex justify-center relative group">{children}</div>
+    </Link>
+  );
+};
 
 const Bar = () => {
   return (
@@ -21,26 +37,17 @@ const Bar = () => {
         <p className="text-sm capitalize ">sajjad</p>
       </div>
       <div id="wrapper" className="flex items-center gap-2">
-        <Link
-          className="flex items-center p-1 sm:p-0 sm:py-1 sm:px-2 hover:bg-zinc-100 dark:hover:bg-zinc-600 rounded-full transform hover:scale-105 transition-transform duration-300 ease-in-out"
-          href={siteConfig.links.twitter}
-          target="_blank"
-        >
-          <div className="flex justify-center relative group">
-            <Icons.x className="w-5 h-5 sm:mr-1" />
-            <p className="text-sm hidden sm:block">sajjad</p>
-          </div>
-        </Link>
-        <Link
-          className="flex items-center p-1 sm:p-0 sm:py-1 sm:px-2 hover:bg-zinc-100 dark:hover:bg-zinc-600 rounded-full transform hover:scale-105 transition-transform duration-300 ease-in-out"
-          href={siteConfig.links.github}
-          target="_blank"
-        >
-          <div className="flex justify-center relative group">
-            <Icons.gitHub className="w-5 h-5 sm:mr-1" />
-            <p className="text-sm hidden sm:block">darkrove</p>
-          </div>
-        </Link>
+        <LinkComp url={siteConfig.links.twitter} target="_blank">
+          <Icons.x className="w-5 h-5" />
+          {/* <p className="text-sm hidden sm:block">sajjad</p> */}
+        </LinkComp>
+        <LinkComp url={siteConfig.links.github} target="_blank">
+          <Icons.gitHub className="w-5 h-5" />
+          {/* <p className="text-sm hidden sm:block">darkrove</p> */}
+        </LinkComp>
+        <LinkComp url={`mailto:${siteConfig.mail}`} target="_blank">
+          <Icons.mail className="w-5 h-5" />
+        </LinkComp>
       </div>
     </div>
   );
