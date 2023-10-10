@@ -22,7 +22,7 @@ const Bar = () => {
       </div>
       <div id="wrapper" className="flex items-center gap-2">
         <Link
-          className="flex items-center p-1 sm:p-0 sm:py-1 sm:px-2 hover:bg-gray-100 rounded-full transform hover:scale-105 transition-transform duration-300 ease-in-out"
+          className="flex items-center p-1 sm:p-0 sm:py-1 sm:px-2 hover:bg-zinc-100 dark:hover:bg-zinc-600 rounded-full transform hover:scale-105 transition-transform duration-300 ease-in-out"
           href={siteConfig.links.twitter}
           target="_blank"
         >
@@ -32,7 +32,7 @@ const Bar = () => {
           </div>
         </Link>
         <Link
-          className="flex items-center p-1 sm:p-0 sm:py-1 sm:px-2 hover:bg-gray-100 rounded-full transform hover:scale-105 transition-transform duration-300 ease-in-out"
+          className="flex items-center p-1 sm:p-0 sm:py-1 sm:px-2 hover:bg-zinc-100 dark:hover:bg-zinc-600 rounded-full transform hover:scale-105 transition-transform duration-300 ease-in-out"
           href={siteConfig.links.github}
           target="_blank"
         >
