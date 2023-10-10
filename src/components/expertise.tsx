@@ -1,17 +1,14 @@
 import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { Icons } from "@/components/icons";
+import Label from "@/components/label";
 
 interface Props {}
 
 const Expertise = () => {
   return (
     <div className="flex flex-col gap-3 w-full justify-start px-8">
-      <div className="leading-none">
-        <h2 className="dark:text-zinc-200 text-zinc-900 text-[1.5rem] m-0 font-bold capitalize">
-          Expertise
-        </h2>
-      </div>
+      <Label size="sm">Expertise</Label>
       <div className="flex gap-3 flex-wrap">
         <Badge variant="success" size="md" className="flex items-center">
           <Icons.react className="mr-2 w-5 h-5" />

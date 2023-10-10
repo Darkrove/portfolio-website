@@ -1,5 +1,5 @@
 import React from "react";
-
+import Label from "@/components/label";
 import { Icons } from "@/components/icons";
 
 interface Props {}
@@ -50,11 +50,7 @@ const techStack = {
 const Stack = () => {
   return (
     <div className="flex flex-col gap-3 w-full justify-start px-8">
-      <div className="leading-none">
-        <h2 className="dark:text-zinc-200 text-zinc-900 text-[1.5rem] m-0 font-bold capitalize">
-          Tech Stack
-        </h2>
-      </div>
+      <Label size="sm">Tech Stack</Label>
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="pb-5">
           <h2 className="dark:text-zinc-400 text-zinc-600 text-[1rem] m-0 font-bold capitalize">

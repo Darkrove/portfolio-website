@@ -15,6 +15,7 @@ import Image from "next/image";
 import { getNextImageUrl } from "@/utility/image";
 import Link from "next/link";
 import { BASE_URL } from "@/config/site";
+import Label from "@/components/label";
 
 interface Props {}
 async function getData() {
@@ -33,11 +34,7 @@ const Repositories = async () => {
   const res = await getData();
   return (
     <div className="flex flex-col gap-3 w-full justify-start px-8">
-      <div className="leading-none">
-        <h2 className="dark:text-zinc-200 text-zinc-900 text-[1.5rem] m-0 font-bold capitalize">
-          Repositories
-        </h2>
-      </div>
+      <Label size="sm">Repositories</Label>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
         {res.map((repo: any, index: Key | null | undefined) => {
           const imageUrl = `p/${repo.name}/image`;
