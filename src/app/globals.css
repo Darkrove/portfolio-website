@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -26,7 +25,7 @@
     --ring: 240 5.9% 10%;
     --radius: 0.75rem;
   }
- 
+
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
@@ -176,4 +175,31 @@ canvas {
   }
 
   /* Add more media queries for other screen sizes as needed */
+}
+
+@layer components {
+  .token.attr-value {
+    @apply text-sky-300;
+  }
+
+  .token.punctuation,
+  .token.attr-equals {
+    @apply text-slate-500;
+  }
+
+  .token.attr-name {
+    @apply text-slate-300;
+  }
+
+  .token.tag {
+    @apply text-pink-400;
+  }
+
+  .line-numbers-rows > span::before {
+    @apply text-gray-600;
+  }
+
+  .line-numbers .line-numbers-rows {
+    @apply border-none;
+  }
 }

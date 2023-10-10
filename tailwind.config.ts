@@ -6,6 +6,7 @@ module.exports = {
     "./src/components/**/*.{ts,tsx}",
     "./src/app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
+    "./node_modules/prismjs/**/*.js",
   ],
   theme: {
     container: {
