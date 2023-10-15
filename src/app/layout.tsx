@@ -6,6 +6,7 @@ import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/context/theme-provider";
 import { ToggleTheme } from "@/components/toggle-theme";
 import { siteConfig } from "@/config/site";
+import { Command } from "@/components/cmd";
 
 const inter = Inter({ subsets: ["latin"] });
 

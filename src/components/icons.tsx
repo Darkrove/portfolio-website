@@ -9,6 +9,7 @@ import {
   AtSign,
   Twitter,
   Hourglass,
+  Command,
 } from "lucide-react";
 import { AiFillStar } from "react-icons/ai";
 import {
@@ -39,6 +40,7 @@ export const Icons = {
   link: Link,
   circle: FaCircle,
   mail: AtSign,
+  cmd: Command,
   graduationHat: FaGraduationCap,
   react: FaReact,
   code: FaCode,
