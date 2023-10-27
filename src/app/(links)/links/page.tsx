@@ -4,7 +4,16 @@ import Label from "@/components/label";
 import Layout from "@/components/layout";
 import React from "react";
 
-import { FaXTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa6";
+import {
+  FaXTwitter,
+  FaLinkedinIn,
+  FaGithub,
+  FaYoutube,
+  FaDiscord,
+  FaDev,
+  FaHashnode,
+} from "react-icons/fa6";
+import { SiBuymeacoffee } from "react-icons/si";
 import Link from "next/link";
 interface Props {}
 
@@ -34,6 +43,46 @@ const page = () => {
       username: "@sajjadshaikh",
       external: true,
     },
+    {
+      id: "youtube",
+      name: "Youtube",
+      link: "https://www.youtube.com/channel/UCeUwCK7pGFp7lvDU-CvLXaQ?view_as=subscriber",
+      icon: FaYoutube({ size: "1rem" }),
+      username: "@sajjadshaikh8515",
+      external: true,
+    },
+    {
+      id: "discord",
+      name: "Discord",
+      link: "https://discord.com/users/756943267701981195",
+      icon: FaDiscord({ size: "1rem" }),
+      username: "@darkrove#3435",
+      external: true,
+    },
+    {
+      id: "buymeacoffee",
+      name: "Buy me a coffee",
+      link: "https://www.buymeacoffee.com/sajjadshaikh",
+      icon: SiBuymeacoffee({ size: "1rem" }),
+      username: "@sajjadshaikh",
+      external: true,
+    },
+    {
+      id: "devto",
+      name: "Dev.to",
+      link: "https://dev.to/darkrove",
+      icon: FaDev({ size: "1rem" }),
+      username: "@darkrove",
+      external: true,
+    },
+    {
+      id: "hashnode",
+      name: "Hashnode",
+      link: "https://hashnode.com/@darkrove",
+      icon: FaHashnode({ size: "1rem" }),
+      username: "@darkrove",
+      external: true,
+    },
   ];
   return (
     <Layout>
@@ -52,7 +101,8 @@ const page = () => {
               >
                 <p>
                   {" "}
-                  {link.name} # {link.username}
+                  {link.name} /{" "}
+                  <span className="text-gray-400">{link.username}</span>
                 </p>
                 {link.icon}
               </Link>
