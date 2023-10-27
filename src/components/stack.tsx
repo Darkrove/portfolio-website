@@ -32,11 +32,19 @@ const techStack = {
       name: "Next.js",
       icon: () => <Icons.next className="mr-2 w-4 h-4" />,
     },
+    {
+      name: "Nuxt.js",
+      icon: () => <Icons.nuxt className="mr-2 w-4 h-4" />,
+    },
   ],
   javascript: [
     {
       name: "React.js",
       icon: () => <Icons.react className="mr-2 w-4 h-4" />,
+    },
+    {
+      name: "Vue.js",
+      icon: () => <Icons.vue className="mr-2 w-4 h-4" />,
     },
   ],
   templates: [
@@ -56,7 +64,7 @@ const Stack = () => {
           <h2 className="dark:text-zinc-400 text-zinc-600 text-[1rem] m-0 font-bold capitalize">
             Frameworks
           </h2>
-          <div className="pt-5 flex flex-col justify-start text-sm dark:text-zinc-400 text-zinc-700">
+          <div className="pt-5 flex gap-2 flex-col justify-start text-sm dark:text-zinc-400 text-zinc-700">
             {techStack.frameworks.map((language, index) => (
               <p key={index} className="flex items-center">
                 {language.icon()}
@@ -69,7 +77,7 @@ const Stack = () => {
           <h2 className="dark:text-zinc-400 text-zinc-600 text-[1rem] m-0 font-bold capitalize">
             Javascript UI
           </h2>
-          <div className="pt-5 flex flex-col justify-start text-sm dark:text-zinc-400 text-zinc-700">
+          <div className="pt-5 flex gap-2 flex-col justify-start text-sm dark:text-zinc-400 text-zinc-700">
             {techStack.javascript.map((language, index) => (
               <p key={index} className="flex items-center">
                 {language.icon()}

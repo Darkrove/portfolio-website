@@ -27,6 +27,8 @@ import {
   SiJavascript,
   SiPython,
   SiTypescript,
+  SiVuedotjs,
+  SiNuxtdotjs,
 } from "react-icons/si";
 import { LiaJava } from "react-icons/lia";
 
@@ -46,6 +48,8 @@ export const Icons = {
   code: FaCode,
   html: SiHtml5,
   css: SiCss3,
+  nuxt: SiNuxtdotjs,
+  vue: SiVuedotjs,
   js: SiJavascript,
   ts: SiTypescript,
   python: SiPython,
