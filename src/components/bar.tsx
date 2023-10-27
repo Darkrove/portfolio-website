@@ -44,14 +44,16 @@ const Bar = () => {
   return (
     <div className="framer-shadow dark:bg-zinc-900 bg-white">
       <div id="wrapper" className="flex gap-2 items-center">
-        <Image
-          className="w-6 h-6"
-          src="/avatar.png"
-          alt="logo"
-          width={100}
-          height={100}
-        />
-        <p className="text-sm capitalize ">sajjad</p>
+        <Link href="/" className="flex gap-2 items-center">
+          <Image
+            className="w-6 h-6"
+            src="/avatar.png"
+            alt="logo"
+            width={100}
+            height={100}
+          />
+          <p className="text-sm capitalize ">sajjad</p>
+        </Link>
       </div>
       <div id="wrapper" className="flex items-center gap-2">
         <LinkComp url={siteConfig.links.twitter} target="_blank" tip="Twitter">
