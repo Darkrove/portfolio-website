@@ -24,7 +24,7 @@ const page = () => {
         <div className="w-full flex flex-col space-y-4 justify-center items-center py-4 sm:py-8">
           <Bar />
           <div className="flex flex-col gap-3 w-full justify-start px-8">
-            <Label size="sm">Cool Animation</Label>
+            <Label size="sm">Cool Snippets</Label>
             <Card>
               <CardHeader>
                 <CardTitle className="text-base">Spring Animation</CardTitle>
