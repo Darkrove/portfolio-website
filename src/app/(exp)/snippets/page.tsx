@@ -36,7 +36,7 @@ const page = () => {
                 <div className="w-full relative h-[300px] c overflow-hidden flex flex-col justify-center items-center">
                   <Rhythm className="absolute inset-0 z-0" />
                   <div className="relative z-10 p-8 min-h-full flex justify-center items-center">
-                    <Label size="lg">Cool Animation</Label>
+                    <Label size="lg" className="text-center">Cool Animation</Label>
                   </div>
                 </div>
               </CardContent>
