@@ -7,7 +7,7 @@ import {
   Star,
   Link,
   AtSign,
-  Twitter,
+  Pin,
   Hourglass,
   Command,
 } from "lucide-react";
@@ -123,21 +123,7 @@ export const Icons = {
       />
     </svg>
   ),
-  pin: (props: LucideProps) => (
-    <svg
-      viewBox="0 0 0.48 0.48"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
-      <path
-        clipRule="evenodd"
-        d="M0.06 0.18v0.009c0 0.043 0.015 0.084 0.041 0.118L0.24 0.48l0.139 -0.173A0.189 0.189 0 0 0 0.42 0.189V0.18A0.18 0.18 0 0 0 0.06 0.18Zm0.18 0.06a0.06 0.06 0 1 0 0 -0.12 0.06 0.06 0 0 0 0 0.12Z"
-        fill="currentColor"
-        fillRule="evenodd"
-      />
-    </svg>
-  ),
+  pin: Pin,
   logo: (props: LucideProps) => (
     <svg
       viewBox="0 0 500 500"
