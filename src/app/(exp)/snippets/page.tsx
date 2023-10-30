@@ -27,7 +27,7 @@ interface CardData {
 const cardList: CardData[] = [
   {
     title: "Spring Animation",
-    description: "Auto scale animation using @framer-motion.",
+    description: "Scale on mouse hover animation using @framer-motion.",
     link: "https://github.com/Darkrove/portfolio-website/tree/main/src/app/(exp)/snippets/rhythm.tsx",
     buttonText: "View Code",
     content: <Rhythm className="absolute inset-0 z-0" />,
