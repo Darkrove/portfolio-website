@@ -24,7 +24,7 @@ export default function Rhythm({ className }: Props) {
   return (
     <div
       className={cn(
-        "flex flex-wrap gap-20 mx-auto p-12 justify-between",
+        "flex flex-wrap gap-20 mx-auto p-12 justify-between bg-black",
         className
       )}
     >

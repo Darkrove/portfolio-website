@@ -90,11 +90,6 @@
   z-index: -1;
 }
 
-canvas {
-  overflow-clip-margin: content-box;
-  overflow: clip;
-}
-
 .d-block {
   display: block !important;
 }
