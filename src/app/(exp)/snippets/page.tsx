@@ -28,14 +28,14 @@ const cardList: CardData[] = [
   {
     title: "Spring Animation",
     description: "Auto scale animation using @framer-motion.",
-    link: "https://github.com/Darkrove/portfolio-website/tree/main/src/components/app/background",
+    link: "https://github.com/Darkrove/portfolio-website/tree/main/src/app/(exp)/snippets/rhythm.tsx",
     buttonText: "View Code",
     content: <Rhythm className="absolute inset-0 z-0" />,
   },
   {
     title: "Space Animation",
     description: "Space animation using @react-three.",
-    link: "https://github.com/Darkrove/portfolio-website/tree/main/src/app/(exp)/snippets/rhythm.tsx",
+    link: "https://github.com/Darkrove/portfolio-website/tree/main/src/components/app/background",
     buttonText: "View Code",
     content: <Background className="absolute inset-0 z-0" />,
   },
