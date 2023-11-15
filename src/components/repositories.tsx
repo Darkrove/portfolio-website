@@ -19,7 +19,7 @@ import Label from "@/components/label";
 
 interface Props {}
 async function getData() {
-  const res = await fetch("https://ghpr.asrvd.me/darkrove", {
+  const res = await fetch("https://pinned.rubkn.dev/api/user/darkrove", {
     cache: "no-store",
   });
 
@@ -36,11 +36,13 @@ const Repositories = async () => {
     <div className="flex flex-col gap-3 w-full justify-start px-8">
       <Label size="sm">Repositories</Label>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-        {res.map((repo: any, index: Key | null | undefined) => {
+        {res.pinnedItems.map((repo: any, index: Key | null | undefined) => {
           const imageUrl = `p/${repo.name}/image`;
-          const language = repo.language;
-          const star = repo.stars;
-          const fork = repo.forks;
+          const languages = Object.keys(repo.languages);
+          const language = languages[0];
+          const firstLanguageColor = repo.languages[language];
+          const star = repo.stargazerCount;
+          const fork = repo.forkCount;
           const url = getNextImageUrl(imageUrl, language, star, fork);
 
           return (
@@ -48,7 +50,7 @@ const Repositories = async () => {
               <CardHeader>
                 <CardTitle className="text-base">
                   <Link
-                    href={`https://github.com/Darkrove/${repo.name}`}
+                    href={repo.url}
                     target="_blank"
                     className="text-sky-600 dark:text-sky-400"
                   >
@@ -73,18 +75,18 @@ const Repositories = async () => {
               <CardFooter className="text-sm">
                 <div className="mt-1 flex items-center justify-start w-full h-6 space-x-4">
                   <p
-                    className={`flex justify-center items-center text-[${repo.languageColor}]`}
+                    className={`flex justify-center items-center text-[${firstLanguageColor}]`}
                   >
-                    <Icons.circle className="w-4 h-4 mr-1" /> {repo.language}
+                    <Icons.circle className="w-4 h-4 mr-1" /> {language}
                   </p>
                   <Separator orientation="vertical" />
                   <p className="flex justify-center items-center">
                     <Icons.star className="w-4 h-4 mr-1 text-yellow-500" />{" "}
-                    {repo.stars}
+                    {star}
                   </p>
                   <Separator orientation="vertical" />
                   <p className="flex justify-center items-center">
-                    <Icons.fork className="w-4 h-4 mr-1" /> {repo.forks}
+                    <Icons.fork className="w-4 h-4 mr-1" /> {fork}
                   </p>
                 </div>
               </CardFooter>
