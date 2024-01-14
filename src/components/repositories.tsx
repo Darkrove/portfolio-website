@@ -19,9 +19,12 @@ import Label from "@/components/label";
 
 interface Props {}
 async function getData() {
-  const res = await fetch("https://pinned.rubkn.dev/api/user/darkrove", {
-    cache: "no-store",
-  });
+  const res = await fetch(
+    process.env.NEXT_URL + "/api/pinned?username=darkrove",
+    {
+      cache: "no-store",
+    }
+  );
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
@@ -32,67 +35,71 @@ async function getData() {
 
 const Repositories = async () => {
   const res = await getData();
+  console.log(res.user);
   return (
     <div className="flex flex-col gap-3 w-full justify-start px-8">
       <Label size="sm">Repositories</Label>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-        {res.pinnedItems.map((repo: any, index: Key | null | undefined) => {
-          const imageUrl = `p/${repo.name}/image`;
-          const languages = Object.keys(repo.languages);
-          const language = languages[0];
-          const firstLanguageColor = repo.languages[language];
-          const star = repo.stargazerCount;
-          const fork = repo.forkCount;
-          const url = getNextImageUrl(imageUrl, language, star, fork);
+        {res.pinnedItems.nodes.map(
+          (repo: any, index: Key | null | undefined) => {
+            const imageUrl = `p/${repo.name}/image`;
+            const languages = repo.languages.nodes;
+            const language = languages.length > 0 ? languages[0].name : ""; // Get the first language name
+            const firstLanguageColor =
+              languages.length > 0 ? languages[0].color : ""; // Get the first language color
+            const star = repo.stargazerCount;
+            const fork = repo.forkCount;
+            const url = getNextImageUrl(imageUrl, language, star, fork);
 
-          return (
-            <Card key={index}>
-              <CardHeader>
-                <CardTitle className="text-base">
-                  <Link
-                    href={repo.url}
-                    target="_blank"
-                    className="text-sky-600 dark:text-sky-400"
-                  >
-                    {repo.name}
+            return (
+              <Card key={index}>
+                <CardHeader>
+                  <CardTitle className="text-base">
+                    <Link
+                      href={repo.url}
+                      target="_blank"
+                      className="text-sky-600 dark:text-sky-400"
+                    >
+                      {repo.name}
+                    </Link>
+                  </CardTitle>
+                  <CardDescription className="text-sm">
+                    {repo.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <Link href={url} target="_blank">
+                    <Image
+                      src={`/${repo.name}-v2.png`}
+                      alt="repo image"
+                      width={1000}
+                      height={1000}
+                      className="w-full rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)] "
+                    />
                   </Link>
-                </CardTitle>
-                <CardDescription className="text-sm">
-                  {repo.description}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Link href={url} target="_blank">
-                  <Image
-                    src={`/${repo.name}-v2.png`}
-                    alt="repo image"
-                    width={1000}
-                    height={1000}
-                    className="w-full rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)] "
-                  />
-                </Link>
-              </CardContent>
-              <CardFooter className="text-sm">
-                <div className="mt-1 flex items-center justify-start w-full h-6 space-x-4">
-                  <p
-                    className={`flex justify-center items-center text-[${firstLanguageColor}]`}
-                  >
-                    <Icons.circle className="w-4 h-4 mr-1" /> {language}
-                  </p>
-                  <Separator orientation="vertical" />
-                  <p className="flex justify-center items-center">
-                    <Icons.star className="w-4 h-4 mr-1 text-yellow-500" />{" "}
-                    {star}
-                  </p>
-                  <Separator orientation="vertical" />
-                  <p className="flex justify-center items-center">
-                    <Icons.fork className="w-4 h-4 mr-1" /> {fork}
-                  </p>
-                </div>
-              </CardFooter>
-            </Card>
-          );
-        })}
+                </CardContent>
+                <CardFooter className="text-sm">
+                  <div className="mt-1 flex items-center justify-start w-full h-6 space-x-4">
+                    <p
+                      className={`flex justify-center items-center text-[${firstLanguageColor}]`}
+                    >
+                      <Icons.circle className="w-4 h-4 mr-1" /> {language}
+                    </p>
+                    <Separator orientation="vertical" />
+                    <p className="flex justify-center items-center">
+                      <Icons.star className="w-4 h-4 mr-1 text-yellow-500" />{" "}
+                      {star}
+                    </p>
+                    <Separator orientation="vertical" />
+                    <p className="flex justify-center items-center">
+                      <Icons.fork className="w-4 h-4 mr-1" /> {fork}
+                    </p>
+                  </div>
+                </CardFooter>
+              </Card>
+            );
+          }
+        )}
       </div>
     </div>
   );
