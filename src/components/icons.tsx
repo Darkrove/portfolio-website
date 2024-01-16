@@ -9,6 +9,7 @@ import {
   AtSign,
   Pin,
   Hourglass,
+  ArrowRight,
   Command,
 } from "lucide-react";
 import { AiFillStar } from "react-icons/ai";
@@ -46,6 +47,7 @@ export const Icons = {
   graduationHat: FaGraduationCap,
   react: FaReact,
   code: FaCode,
+  arrow: ArrowRight,
   html: SiHtml5,
   css: SiCss3,
   nuxt: SiNuxtdotjs,

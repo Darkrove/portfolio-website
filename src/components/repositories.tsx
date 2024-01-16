@@ -16,6 +16,8 @@ import { getNextImageUrl } from "@/utility/image";
 import Link from "next/link";
 import { BASE_URL } from "@/config/site";
 import Label from "@/components/label";
+import { ArrowRight } from "lucide-react";
+import { buttonVariants } from "./ui/button";
 
 interface Props {}
 async function getData() {
@@ -52,8 +54,8 @@ const Repositories = async () => {
             const url = getNextImageUrl(imageUrl, language, star, fork);
 
             return (
-              <Card key={index}>
-                <CardHeader>
+              <Card key={index} className="border-none">
+                {/* <CardHeader>
                   <CardTitle className="text-base">
                     <Link
                       href={repo.url}
@@ -66,8 +68,17 @@ const Repositories = async () => {
                   <CardDescription className="text-sm">
                     {repo.description}
                   </CardDescription>
+                </CardHeader> */}
+                <CardHeader>
+                  <Image
+                    src={`/${repo.name}-v2.png`}
+                    alt="repo image"
+                    width={1000}
+                    height={1000}
+                    className="w-full rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)] opacity-80 hover:opacity-100"
+                  />
                 </CardHeader>
-                <CardContent>
+                {/* <CardContent>
                   <Link href={url} target="_blank">
                     <Image
                       src={`/${repo.name}-v2.png`}
@@ -77,9 +88,9 @@ const Repositories = async () => {
                       className="w-full rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)] "
                     />
                   </Link>
-                </CardContent>
+                </CardContent> */}
                 <CardFooter className="text-sm">
-                  <div className="mt-1 flex items-center justify-start w-full h-6 space-x-4">
+                  {/* <div className="mt-1 flex items-center justify-start w-full h-6 space-x-4">
                     <p
                       className={`flex justify-center items-center text-[${firstLanguageColor}]`}
                     >
@@ -94,6 +105,24 @@ const Repositories = async () => {
                     <p className="flex justify-center items-center">
                       <Icons.fork className="w-4 h-4 mr-1" /> {fork}
                     </p>
+                  </div> */}
+                  <div className="flex items-center justify-between w-full">
+                    <div className="space-y-1">
+                      <h1 className="text-lg font-bold">{repo.name}</h1>
+                      <p className="text-sm text-gray-400 lowercase">
+                        {language}
+                      </p>
+                    </div>
+                    <Link
+                      href={repo.url}
+                      target="_blank"
+                      className={buttonVariants({
+                        size: "icon",
+                        variant: "secondary",
+                      })}
+                    >
+                      <ArrowRight className="h-5 w-5" />
+                    </Link>
                   </div>
                 </CardFooter>
               </Card>
