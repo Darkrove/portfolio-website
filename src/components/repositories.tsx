@@ -40,7 +40,7 @@ const Repositories = async () => {
   console.log(res.user);
   return (
     <div className="flex flex-col gap-3 w-full justify-start px-8">
-      <Label size="sm">Repositories</Label>
+      <Label size="sm">projects.</Label>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
         {res.pinnedItems.nodes.map(
           (repo: any, index: Key | null | undefined) => {
