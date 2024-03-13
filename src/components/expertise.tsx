@@ -8,7 +8,7 @@ interface Props {}
 const Expertise = () => {
   return (
     <div className="flex flex-col gap-3 w-full justify-start px-8">
-      <Label size="sm">Expertise</Label>
+      <Label size="sm">expertise.</Label>
       <div className="flex gap-3 flex-wrap">
         <Badge variant="success" size="md" className="flex items-center">
           <Icons.react className="mr-2 w-5 h-5" />
