@@ -11,7 +11,7 @@ const Intro = () => {
     <div className="w-full h-full px-8 py-4 flex flex-col justify-center items-center relative">
       <section className="flex flex-col-reverse lg:flex-row md:flex-row w-full justify-between items-start gap-4 lg:gap-14 md:gap-8 prose">
         <div className="leading-none">
-          <Label size="md capitalize">Hi, I&apos;m {siteConfig.name}</Label>
+          <Label size="md">Hi, I&apos;m {siteConfig.name}</Label>
           <p className="dark:text-zinc-300 text-zinc-800 mt-2 mb-4 m-0">
             {siteConfig.description}
           </p>
