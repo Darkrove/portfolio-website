@@ -58,7 +58,7 @@ const techStack = {
 const Stack = () => {
   return (
     <div className="flex flex-col gap-3 w-full justify-start px-8">
-      <Label size="sm">Tech Stack</Label>
+      <Label size="sm">skills.</Label>
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="pb-5">
           <h2 className="dark:text-zinc-400 text-zinc-600 text-[1rem] m-0 font-bold capitalize">
