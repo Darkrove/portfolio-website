@@ -2,8 +2,8 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   name: "sajjad shaikh",
-  description: "web developer",
-  bio: "I am a self-taught 👨‍💻 web developer and programmer who recently pursued a computer science degree 🎓. I started coding in the 11th grade and discovered my passion for 🌐 web development during the COVID-19 pandemic. I love working on both the frontend and backend. Currently, I am exploring the exciting world of Web 3 🕸️.",
+  description: "Database Administrator | Data Specialist | MongoDB Expert",
+  bio: "Data Specialist with expertise in MongoDB, Data Monitoring, and Database Administration. Currently at HERE Technologies, optimizing databases and ensuring data integrity. Previously, a Database Administrator at 9I-INFOTECH PVT LTD, gaining hands-on experience with MongoDB, Atlas, and Database Design. Passionate about NoSQL databases, performance tuning, and scalable solutions. Always eager to learn and connect!",
   mainNav: [
     {
       title: "Home",

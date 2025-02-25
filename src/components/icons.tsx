@@ -19,6 +19,7 @@ import {
   FaCode,
   FaJava,
   FaHourglassEnd,
+  FaDatabase,
   FaCircle,
 } from "react-icons/fa";
 import {
@@ -30,6 +31,8 @@ import {
   SiTypescript,
   SiVuedotjs,
   SiNuxtdotjs,
+  SiMongodb,
+  SiMysql,
 } from "react-icons/si";
 import { LiaJava } from "react-icons/lia";
 
@@ -37,7 +40,10 @@ type IconProps = React.HTMLAttributes<SVGElement>;
 
 export const Icons = {
   sun: SunMedium,
+  mongo: SiMongodb,
+  database: FaDatabase,
   moon: Moon,
+  sql: SiMysql,
   up: MoveUpRightIcon,
   star: AiFillStar,
   link: Link,

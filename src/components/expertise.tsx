@@ -11,16 +11,16 @@ const Expertise = () => {
       <Label size="sm">expertise.</Label>
       <div className="flex gap-3 flex-wrap">
         <Badge variant="success" size="md" className="flex items-center">
-          <Icons.react className="mr-2 w-5 h-5" />
-          React Developer
+          <Icons.mongo className="mr-2 w-5 h-5" />
+          MongoDB
         </Badge>
         <Badge variant="error" size="md" className="flex items-center">
-          <Icons.code className="mr-2 w-5 h-5" />
-          Web Developer
+          <Icons.database className="mr-2 w-5 h-5" />
+          Database Administration
         </Badge>
         <Badge variant="info" size="md" className="flex items-center">
-          <Icons.graduationHat className="mr-2 w-5 h-5" />
-          Graduate Student
+          <Icons.code className="mr-2 w-5 h-5" />
+          Data Monitoring
         </Badge>
       </div>
     </div>

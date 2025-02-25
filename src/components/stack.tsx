@@ -53,6 +53,16 @@ const techStack = {
       icon: () => <Icons.ts className="mr-2 w-4 h-4" />,
     },
   ],
+  database: [
+    {
+      name: "MongoDB",
+      icon: () => <Icons.mongo className="mr-2 w-4 h-4" />,
+    },
+    {
+      name: "MySQL",
+      icon: () => <Icons.database className="mr-2 w-4 h-4" />,
+    },
+  ],
 };
 
 const Stack = () => {
@@ -86,19 +96,7 @@ const Stack = () => {
             ))}
           </div>
         </div>
-        <div className="pb-5">
-          <h2 className="dark:text-zinc-400 text-zinc-600 text-[1rem] m-0 font-bold capitalize">
-            Languages
-          </h2>
-          <div className="pt-5 flex gap-2 flex-col justify-start text-sm dark:text-zinc-400 text-zinc-700">
-            {techStack.languages.map((language, index) => (
-              <p key={index} className="flex items-center">
-                {language.icon()}
-                {language.name}
-              </p>
-            ))}
-          </div>
-        </div>
+        <div>
         <div className="pb-5">
           <h2 className="dark:text-zinc-400 text-zinc-600 text-[1rem] m-0 font-bold capitalize">
             Templating Languages
@@ -112,6 +110,33 @@ const Stack = () => {
             ))}
           </div>
         </div>
+        <div className="pb-5">
+          <h2 className="dark:text-zinc-400 text-zinc-600 text-[1rem] m-0 font-bold capitalize">
+            Database
+          </h2>
+          <div className="pt-5 flex gap-2 flex-col justify-start text-sm dark:text-zinc-400 text-zinc-700">
+            {techStack.database.map((language, index) => (
+              <p key={index} className="flex items-center">
+                {language.icon()}
+                {language.name}
+              </p>
+            ))}
+          </div>
+        </div>
+        </div>
+        <div className="pb-5">
+          <h2 className="dark:text-zinc-400 text-zinc-600 text-[1rem] m-0 font-bold capitalize">
+            Languages
+          </h2>
+          <div className="pt-5 flex gap-2 flex-col justify-start text-sm dark:text-zinc-400 text-zinc-700">
+            {techStack.languages.map((language, index) => (
+              <p key={index} className="flex items-center">
+                {language.icon()}
+                {language.name}
+              </p>
+            ))}
+          </div>
+        </div> 
       </div>
     </div>
   );

@@ -30,14 +30,14 @@ export function Stats() {
     error: githubError,
   } = useSWR(apiUrls.github.get("darkrove"), fetcher);
 
-  const {
-    data: umamiData = [],
-    isLoading: isUmamiLoading,
-    error: umamiError,
-  } = useSWR(
-    apiUrls.umami.get("6c2507b8-6434-42d4-8775-f0fea81d3b90"),
-    fetcher
-  );
+  // const {
+  //   data: umamiData = [],
+  //   isLoading: isUmamiLoading,
+  //   error: umamiError,
+  // } = useSWR(
+  //   apiUrls.umami.get("6c2507b8-6434-42d4-8775-f0fea81d3b90"),
+  //   fetcher
+  // );
 
   return (
     <div className="flex gap-3 w-full justify-start px-8">
@@ -64,6 +64,7 @@ export function Stats() {
           )}
         >
           <SiDiscord className="inline-block mr-1 w-4 h-4" />{" "}
+          Discord - {" "}
           {lanyardData.data?.discord_status || "offline"}
         </p>
       )}
@@ -77,6 +78,7 @@ export function Stats() {
       ) : (
         <p className="dark:text-rose-400 text-rose-600 m-0 text-xs lg:text-sm md:text-sm flex justify-center items-center">
           <SiLeetcode className="inline-block mr-1 w-4 h-4" />{" "}
+          Leetcode - {" "}
           {leetcodeData.data?.userProfile?.profile?.ranking}
         </p>
       )}
@@ -90,11 +92,12 @@ export function Stats() {
       ) : (
         <p className="dark:text-orange-400 text-orange-600 m-0 text-xs lg:text-sm md:text-sm flex justify-center items-center">
           <AiFillStar className="inline-block mr-1 w-4 h-4" />{" "}
+          Github Stars - {" "}
           {githubData.stars}
         </p>
       )}
 
-      <Separator orientation="vertical" />
+      {/* <Separator orientation="vertical" />
       {isUmamiLoading ? (
         <div className="dark:text-zinc-400 text-zinc-700 m-0 text-xs lg:text-sm md:text-sm flex justify-center items-center">
           <AiFillEye className="inline-block mr-1 w-4 h-4" />
@@ -105,7 +108,7 @@ export function Stats() {
           <AiFillEye className="inline-block mr-1 w-4 h-4" />{" "}
           {umamiData.pageviews?.value}
         </p>
-      )}
+      )} */}
     </div>
   );
 }

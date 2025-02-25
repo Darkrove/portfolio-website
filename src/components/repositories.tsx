@@ -129,6 +129,37 @@ const Repositories = async () => {
             );
           }
         )}
+        <Card className="border-none">
+                <CardHeader>
+                  <Image
+                    src={`/hae-v2.png`}
+                    alt="repo image"
+                    width={1000}
+                    height={1000}
+                    className="w-full rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)] opacity-80 hover:opacity-100"
+                  />
+                </CardHeader>
+                <CardFooter className="text-sm">
+                  <div className="flex items-center justify-between w-full">
+                    <div className="space-y-1">
+                      <h1 className="text-lg font-bold">Data Monitoring</h1>
+                      <p className="text-sm text-gray-400 camelcase">
+                        Typescript, MongoDB, Next
+                      </p>
+                    </div>
+                    <Link
+                      href="http://dashboard-hae.vercel.app/"
+                      target="_blank"
+                      className={buttonVariants({
+                        size: "icon",
+                        variant: "secondary",
+                      })}
+                    >
+                      <ArrowRight className="h-5 w-5" />
+                    </Link>
+                  </div>
+                </CardFooter>
+              </Card>
       </div>
     </div>
   );
