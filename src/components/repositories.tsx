@@ -109,7 +109,7 @@ const Repositories = async () => {
                   <div className="flex items-center justify-between w-full">
                     <div className="space-y-1">
                       <h1 className="text-lg font-bold">{repo.name}</h1>
-                      <p className="text-sm text-gray-400 lowercase">
+                      <p className="text-sm text-gray-400 camelcase">
                         {language}
                       </p>
                     </div>
