@@ -43,7 +43,8 @@ export function Stats() {
     <div className="flex gap-3 w-full justify-start px-8">
       {isLanyardLoading ? (
         <div className="dark:text-zinc-400 text-zinc-700 m-0 text-xs lg:text-sm md:text-sm flex justify-center items-center">
-          <SiDiscord className="inline-block mr-1 w-4 h-4" />
+          <SiDiscord className="inline-block mr-1 w-4 h-4" />{" "}
+          Discord - {" "}
           <Skeleton className="h-4 w-[30px] md:h-5" />
         </div>
       ) : (
@@ -72,7 +73,8 @@ export function Stats() {
       <Separator orientation="vertical" />
       {isLeetcodeLoading ? (
         <div className="dark:text-zinc-400 text-zinc-700 m-0 text-xs lg:text-sm md:text-sm flex justify-center items-center">
-          <SiLeetcode className="inline-block mr-1 w-4 h-4" />
+          <SiLeetcode className="inline-block mr-1 w-4 h-4" />{" "}
+          Leetcode - {" "}
           <Skeleton className="h-4 w-[30px] md:h-5" />
         </div>
       ) : (
@@ -86,7 +88,8 @@ export function Stats() {
       <Separator orientation="vertical" />
       {isGithubLoading ? (
         <div className="dark:text-zinc-400 text-zinc-700 m-0 text-xs lg:text-sm md:text-sm flex justify-center items-center">
-          <AiFillStar className="inline-block mr-1 w-4 h-4" />
+          <AiFillStar className="inline-block mr-1 w-4 h-4" />{" "}
+          Github Stars - {" "}
           <Skeleton className="h-4 w-[30px] md:h-5" />
         </div>
       ) : (
