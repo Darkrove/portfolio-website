@@ -2,8 +2,8 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   name: "sajjad shaikh",
-  description: "Database Administrator | Data Specialist | MongoDB Expert",
-  bio: "Data Specialist with expertise in MongoDB, Data Monitoring, and Database Administration. Currently at HERE Technologies, optimizing databases and ensuring data integrity. Previously, a Database Administrator at 9I-INFOTECH PVT LTD, gaining hands-on experience with MongoDB, Atlas, and Database Design. Passionate about NoSQL databases, performance tuning, and scalable solutions. Always eager to learn and connect!",
+  description: "Database Administrator | Data Specialist",
+  bio: "Data Specialist with expertise in MongoDB, data monitoring, and database administration. Currently at HERE Technologies, optimizing databases and ensuring data integrity while gaining hands-on experience with MongoDB, Atlas, and database design. Passionate about NoSQL databases, performance tuning, and building scalable solutions. Additionally, I have a strong interest in React and Next.js, having worked on numerous projects using Next.js. Always eager to learn, innovate, and connect!",
   mainNav: [
     {
       title: "Home",
