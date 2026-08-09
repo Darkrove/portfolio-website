@@ -175,7 +175,7 @@ export function Hero() {
                     <div className="flex flex-col gap-6">
                         <div className="flex items-center gap-4 w-full">
                             <a
-                                href="mailto:yb@yashbhardwaj.com"
+                                href="mailto:samaralishaikh212@gmail.com"
                                 onClick={handleEmailClick}
                                 className="group relative text-gray-400 hover:text-gray-600"
                             >
@@ -187,7 +187,7 @@ export function Hero() {
                                 )}
                             </a>
                             <a
-                                href="https://x.com/ybhrdwj"
+                                href="https://twitter.com/sajjads72619701"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-gray-400 hover:text-gray-600"
@@ -195,7 +195,7 @@ export function Hero() {
                                 <Icons.x className="h-5 w-5" />
                             </a>
                             <a
-                                href="https://instagram.com/ybhrdwj"
+                                href="https://instagram.com/sajjadshaikh.io"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-gray-400 hover:text-gray-600"
@@ -203,7 +203,7 @@ export function Hero() {
                                 <Instagram className="h-5 w-5" />
                             </a>
                             <a
-                                href="https://github.com/ybhrdwj"
+                                href="https://github.com/Darkrove"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-gray-400 hover:text-gray-600"
@@ -339,7 +339,7 @@ export function Hero() {
                 <div className="flex items-center gap-6">
                     <div className="flex items-center gap-4">
                         <a
-                            href="mailto:yb@yashbhardwaj.com"
+                            href="mailto:samaralishaikh212@gmail.com"
                             onClick={handleEmailClick}
                             className="group relative text-gray-400 hover:text-gray-600"
                         >
@@ -351,7 +351,7 @@ export function Hero() {
                             ) : null}
                         </a>
                         <a
-                            href="https://x.com/ybhrdwj"
+                            href="https://twitter.com/sajjads72619701"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-gray-400 hover:text-gray-600"
@@ -359,7 +359,7 @@ export function Hero() {
                             <Icons.x className="h-5 w-5" />
                         </a>
                         <a
-                            href="https://instagram.com/ybhrdwj"
+                            href="https://instagram.com/sajjadshaikh.io"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-gray-400 hover:text-gray-600"
@@ -367,7 +367,7 @@ export function Hero() {
                             <Instagram className="h-5 w-5" />
                         </a>
                         <a
-                            href="https://github.com/ybhrdwj"
+                            href="https://github.com/Darkrove"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-gray-400 hover:text-gray-600"
