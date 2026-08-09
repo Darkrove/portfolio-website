@@ -46,9 +46,9 @@ export default function RootLayout({
               <MobileNavBar path={currentRoute} />
             </div> */}
           {children}
-          <div className="hidden sm:block">
+          {/* <div className="hidden sm:block">
             <ToggleTheme />
-          </div>
+          </div> */}
         </ThemeProvider>
       </body>
     </html>

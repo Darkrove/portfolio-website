@@ -1,0 +1,29 @@
+{
+  "title": "PROJECTS",
+  "projects": [
+    {
+      "logo": "/darkspace-v2.png",
+      "name": "Darkspace",
+      "url": "darkspace.vercel",
+      "description": "A web3 based storage platform for your files and data"
+    },
+    {
+      "logo": "/logos/lavishlinen.png",
+      "name": "Lavish Linen",
+      "url": "lavishlinen.sh",
+      "description": "A Ecommerce platform for premium linen products"
+    },
+    {
+      "logo": "/logos/bagbee.png",
+      "name": "Bag Bee",
+      "url": "bag-bee-v2.vercel.app",
+      "description": "A advanced POS system for your retail store with dealer, products management and analytics"
+    },
+    {
+      "logo": "/logos/productivity.png",
+      "name": "productivity",
+      "url": "productivity-darkrove.vercel.app",
+      "description": "A collaborative app to manage your tasks, To-Do's and projects with ease"
+    }
+  ]
+} 

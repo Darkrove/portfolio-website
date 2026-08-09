@@ -20,7 +20,7 @@ const Intro = () => {
           </Balancer>
         </div>
         <div className="min-w-fit h-full flex items-center justify-center">
-          <Avatar className="w-32 h-32">
+          <Avatar className="w-40 h-40">
             <AvatarImage src="https://avatars.githubusercontent.com/u/53792139?v=4" />
             <AvatarFallback>SS</AvatarFallback>
           </Avatar>

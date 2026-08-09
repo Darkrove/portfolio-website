@@ -14,6 +14,8 @@ import Stack from "@/components/stack";
 import Expertise from "@/components/expertise";
 import Cta from "@/components/cta";
 import Repositories from "@/components/repositories";
+import { Hero } from "@/components/hero";
+import { Projects } from "@/components/projects";
 
 interface Props {}
 
@@ -52,15 +54,40 @@ const Page: React.FC<Props> = () => {
     <Layout>
       <div className="w-full flex flex-col space-y-4 justify-center items-center py-4 sm:py-8">
         <Bar />
-        <Intro />
-        <Stats />
+        <Hero />
+        {/* Content Grid */}
+      <div className="mx-auto w-full max-w-[1084px] px-4 md:px-0">
+        {/* Mobile layout - stacked */}
+        <div className="flex flex-col gap-12 md:hidden">
+          <Projects />
+        </div>
+        
+        {/* Desktop layout - side by side */}
+        <div className="hidden md:grid md:grid-cols-12 md:gap-5">
+          <div className="col-span-1" />
+          
+          {/* Projects - 7 columns */}
+          <div className="col-span-7">
+            <Projects />
+          </div>
+
+          {/* Blog section - 3 columns but shifted more left */}
+          <div className="col-span-3 -ml-28">
+
+          </div>
+
+          <div className="col-span-1" />
+        </div>
+      </div>
+        {/* <Intro /> */}
+        {/* <Stats />
         <Cta />
         <Separator />
         <Expertise />
         <Separator />
         <Stack />
         <Separator />
-        <Repositories />
+        <Repositories /> */}
         {/* <h1
           style={h1Style}
           className="font-extrabold text-2xl text-center uppercase"
