@@ -38,7 +38,7 @@ export default function RootLayout({
         ></script>
       </head>
       <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           {/* <div className="w-[6%] fixed left-0 h-full z-50 hidden lg:block md:block">
             <NavBar path={pathname} />
           </div> */}
