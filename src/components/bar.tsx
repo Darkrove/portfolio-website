@@ -16,6 +16,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { haptic } from "@/lib/haptic";
 
 interface LinkCompProps {
   url: string;
@@ -110,7 +111,7 @@ const Bar = () => {
         </div>
       </div>
       {/* Mobile Menu Button - After weather */}
-      <div className="ml-4 md:hidden border rounded-full p-1 hover:bg-zinc-100 dark:hover:bg-zinc-600">
+      <div className="ml-4 md:hidden border rounded-full p-1 hover:bg-zinc-100 dark:hover:bg-zinc-600" onClick={() => haptic()}>
         <Command />
       </div>
       {/* <div id="wrapper" className="flex items-center gap-2">
