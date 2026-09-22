@@ -30,12 +30,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script
-          async
-          defer
-          data-website-id="6c2507b8-6434-42d4-8775-f0fea81d3b90"
-          src="https://umami-darkspace.vercel.app/umami.js"
-        ></script>
+        <script defer src="https://umami-space.vercel.app/script.js" data-website-id="9820318d-59d2-4a97-b6a6-5e1f197b367e"></script>
+        <script defer src="https://umami-space.vercel.app/recorder.js" data-website-id="9820318d-59d2-4a97-b6a6-5e1f197b367e"></script>
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
